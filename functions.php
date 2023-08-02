@@ -105,17 +105,14 @@ add_action( 'after_setup_theme', function() {
      */
     // Register custom ACF Blocks
     'acf_blocks' => [
-      // [
-      //   'name'           => 'block-file-slug',
-      //   'title'          => 'Block Visible Name',
-      //   // You can safely remove lines below if you find no use for them
-      //   'prevent_cache'  => false, // Defaults to false,
-      //   // Icon defaults to svg file inside svg/block-icons named after the block name,
-      //   // eg. svg/block-icons/block-file-slug.svg
-      //   //
-      //   // Icon setting defines the dashicon equivalent: https://developer.wordpress.org/resource/dashicons/#block-default
-      //   // 'icon'  => 'block-default',
-      // ],
+        [
+        'name'           => 'head-and-image',
+        'title'          => 'Rubrik med bakgrundsbild',
+        'supports'		   => [
+          'anchor'          => true,
+          'jsx' 			      => true,
+        ]
+      ],
     ],
 
     // Custom ACF block default settings
@@ -137,44 +134,58 @@ add_action( 'after_setup_theme', function() {
     // Restrict to only selected blocks
     // Set the value to 'all' to allow all blocks everywhere
    'allowed_blocks' => [
-      'default' => [
-      ],
-      'post' => [
-        'core/archives',
-        'core/audio',
-        'core/buttons',
-        'core/categories',
-        'core/code',
-        'core/column',
-        'core/columns',
-        'core/coverImage',
-        'core/embed',
-        'core/file',
-        'core/freeform',
-        'core/gallery',
-        'core/heading',
-        'core/html',
-        'core/image',
-        'core/latestComments',
-        'core/latestPosts',
-        'core/list',
-        'core/list-item',
-        'core/more',
-        'core/nextpage',
-        'core/paragraph',
-        'core/preformatted',
-        'core/pullquote',
-        'core/quote',
-        'core/block',
-        'core/separator',
-        'core/shortcode',
-        'core/spacer',
-        'core/subhead',
-        'core/table',
-        'core/textColumns',
-        'core/verse',
-        'core/video',
-      ],
+    'default' => [
+      'core/gallery',
+      'core/buttons',
+      'core/list',
+      'core/image',
+      'core/block',
+      'core/paragraph',
+      'core/heading',
+      'core/video',
+      'core/spacer',
+      'core/file',
+      'core/subhead',
+      'core/quote',
+      'core/group',
+      
+    ],
+    'post' => [
+      'core/archives',
+      'core/audio',
+      'core/buttons',
+      'core/categories',
+      'core/code',
+      'core/column',
+      'core/columns',
+      'core/coverImage',
+      'core/embed',
+      'core/file',
+      'core/freeform',
+      'core/gallery',
+      'core/heading',
+      'core/html',
+      'core/image',
+      'core/latestComments',
+      'core/latestPosts',
+      'core/list',
+      'core/list-item',
+      'core/more',
+      'core/nextpage',
+      'core/paragraph',
+      'core/preformatted',
+      'core/pullquote',
+      'core/quote',
+      'core/block',
+      'core/separator',
+      'core/shortcode',
+      'core/spacer',
+      'core/subhead',
+      'core/table',
+      'core/textColumns',
+      'core/verse',
+      'core/video',
+    ],
     ],
 
     // If you want to use classic editor somewhere, define it here
