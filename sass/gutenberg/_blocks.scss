@@ -17,6 +17,7 @@
   // Custom Gutenberg block styles
   @import 'gutenberg/blocks/boxed';
   @import 'gutenberg/blocks/button-file';
+  
 
   // Add here those ACF Gutenberg blocks you want to use inside article-content
   // @import 'gutenberg/blocks/your-new-acf-block';
@@ -31,3 +32,4 @@
   // ACF blocks
   // @import 'gutenberg/blocks/your-new-acf-block';
 }
+@import 'gutenberg/blocks/head-and-image';

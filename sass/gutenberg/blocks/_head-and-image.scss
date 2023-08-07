@@ -1,0 +1,17 @@
+.image-title-block{
+  position: relative;
+  text-align: center;
+  h2{
+    color: var(--color-white);
+    text-shadow: 3px 3px 6px fade-out($color: #000000, $amount: 0.6);
+    font-weight: 300;
+    margin: 0;
+    font-size: 10rem;
+  }
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
