@@ -113,6 +113,14 @@ add_action( 'after_setup_theme', function() {
           'jsx' 			      => true,
         ]
       ],
+        [
+        'name'           => 'packages-block',
+        'title'          => 'Jämför paket-block',
+        'supports'		   => [
+          'anchor'          => true,
+          'jsx' 			      => true,
+        ]
+      ],
     ],
 
     // Custom ACF block default settings
@@ -199,6 +207,13 @@ add_action( 'after_setup_theme', function() {
 
   define( 'THEME_SETTINGS', $theme_settings );
 } ); // end action after_setup_theme
+
+function admin_theme_style()
+{
+  wp_enqueue_style( 'admin-theme', get_stylesheet_directory_uri() . '/admin/admin.css' );
+}
+add_action('admin_enqueue_scripts', __NAMESPACE__ . '\admin_theme_style');
+add_action('login_enqueue_scripts', __NAMESPACE__ . '\admin_theme_style');
 
 /**
  * Required files
