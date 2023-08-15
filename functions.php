@@ -106,14 +106,6 @@ add_action( 'after_setup_theme', function() {
     // Register custom ACF Blocks
     'acf_blocks' => [
         [
-        'name'           => 'head-and-image',
-        'title'          => 'Rubrik med bakgrundsbild',
-        'supports'		   => [
-          'anchor'          => true,
-          'jsx' 			      => true,
-        ]
-      ],
-        [
         'name'           => 'packages-block',
         'title'          => 'Jämför paket-block',
         'supports'		   => [
