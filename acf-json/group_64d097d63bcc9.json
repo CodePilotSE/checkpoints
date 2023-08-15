@@ -5,7 +5,7 @@
         {
             "key": "field_64d097d696527",
             "label": "Jämför paket",
-            "name": "compare-packages-front-page",
+            "name": "compare-package-pricing",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -26,8 +26,8 @@
             "sub_fields": [
                 {
                     "key": "field_5efdaeb81b607",
-                    "label": "Title",
-                    "name": "title",
+                    "label": "Paketnamn",
+                    "name": "name",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -39,10 +39,10 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": "",
                     "parent_repeater": "field_64d097d696527"
                 },
                 {
@@ -180,8 +180,8 @@
                         },
                         {
                             "key": "field_5efdaf7b1b60c",
-                            "label": "Title",
-                            "name": "title",
+                            "label": "Feature namn",
+                            "name": "single-feature",
                             "aria-label": "",
                             "type": "text",
                             "instructions": "",
@@ -193,10 +193,10 @@
                                 "id": ""
                             },
                             "default_value": "",
+                            "maxlength": "",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
                             "parent_repeater": "field_5efdaf351b60a"
                         }
                     ],
@@ -301,5 +301,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691402506
+    "modified": 1692101378
 }
