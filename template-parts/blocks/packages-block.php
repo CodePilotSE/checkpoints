@@ -1,4 +1,4 @@
-<section>
+<section class="package-pricing-block">
 
 
   <?php 
@@ -15,44 +15,45 @@
         $button = get_sub_field('button-link');
         $enabled = get_sub_field('enabled');
     ?>
-    <div class="<?= $enabled ? '' : 'disabled' ?>">
-      <?= $offer ? "<span>". $offer ."</span>" : '' ?>
-      <h2><?= $title?></h2>
-      <span><?= $pricing?></span>
-      <?= $sale_price ? "<span>". $sale_price ."</span>" : '' ?>
-      <div>
+    <div class="<?= $enabled ? '' : 'disabled' ?> package-pricing-block__card">
+      <?= $offer ? '<span class="package-pricing-block__offer">'. $offer .'</span>' : '' ?>
+      <h2 class="package-pricing-block__title"><?= $title?></h2>
+      <span class="package-pricing-block__price"><?= $pricing?></span>
+      <?= $sale_price ? '<span class="package-pricing-block__sale_price" >'. $sale_price .'</span>' : '' ?>
       <?php
 
       // package feature rows
-      if( have_rows('package-features') ):
-        while( have_rows('package-features') ) : the_row();
-        
-          $icon = get_sub_field('icon');
-          $feat = get_sub_field('single-feature');
-          $icon_url = get_template_directory().'/svg/checkpoints-icons/'. $icon .'.php';
-          ?>
-
-          <span>
-           <?php 
-            include $icon_url; 
-            echo $feat; 
+      if( have_rows('package-features') ):?>  
+        <div class="package-pricing-block__feature-list"> <?php
+          while( have_rows('package-features') ) : the_row();
+          
+            $icon = get_sub_field('icon');
+            $feat = get_sub_field('single-feature');
+            $icon_url = get_template_directory().'/svg/checkpoints-icons/'. $icon .'.php';
             ?>
-          </span>
-          <?php
-          endwhile;
+
+            <span class="package-pricing-block__single-feature">
+            <?php 
+              include $icon_url; 
+              echo $feat; 
+              ?>
+            </span>
+            <?php
+          endwhile; ?> 
+         </div> <?php
         endif;
         
         // end of package feature rows
 
         if($button):
-          ?><a href="<?= $button['url'] ?>"><button>
+          ?><a href="<?= $button['url'] ?>" class="package-pricing-block__link no-external-link-indicator"><button class="button button--no-bg">
             <?= $button['title']; ?>
             </button></a>
           <?php
             
         endif;
         ?>
-      </div>
+      
 
     </div>
     <?php
