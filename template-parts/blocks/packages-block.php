@@ -44,7 +44,7 @@
         // end of package feature rows
 
         if($button):
-          ?><a <?= $ebabled ?  'href="'.$button['url']. '"' : '' ?> target="_blank" class="package-pricing-block__link no-external-link-indicator">
+          ?><a href="<?=  $button['url']  ?>" aria-disabled="<?= $enabled ? 'false' :'true' ?>" target="_blank" class="package-pricing-block__link no-external-link-indicator">
           <button class="button button--no-bg">
             <?= $button['title']; ?>
             </button>
