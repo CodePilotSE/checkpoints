@@ -1,0 +1,90 @@
+.package-pricing-block{
+  display: flex;
+  justify-content: center;
+  padding: 6rem 4rem;
+  width: calc(100% - 8rem);
+  max-width: 1400px;
+  margin: 0 auto;
+  &__card{
+    flex: 1;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    h2{
+      color: var(--color-white);
+      text-align: center;
+      font-size: 2.2rem;
+    }
+    
+    border-radius: 2rem;
+    padding: 4rem 2rem;
+    color: var(--color-white);
+
+    &:first-child{
+      background: rgb(43,76,155);
+      background: linear-gradient(0deg, rgba(43,76,155,1) 0%, rgba(70,166,233,1) 100%);
+      margin-right: 5rem;
+    }
+    &:nth-child(2){
+      border-radius: 2rem 0 0 2rem;
+      padding: 4rem 1rem 4rem 2rem;
+      background: rgb(43,76,154);
+      background: linear-gradient(0deg, rgba(43,76,154,1) 0%, rgba(4,133,223,1) 100%);
+    }
+    &:nth-child(3){
+      height: calc(100% + 6rem );
+      align-self: center;
+      z-index: 2;
+      background: rgb(45,43,120);
+      background: linear-gradient(0deg, rgba(45,43,120,1) 0%, rgba(38,73,196,1) 100%);
+    }
+    &:nth-child(4){
+      padding: 4rem 2rem 4rem 1rem;
+      border-radius: 0 2rem 2rem 0 ;
+      background: rgb(43,75,154);
+      background: linear-gradient(0deg, rgba(44,75,156,1) 0%, rgba(97,24,189,1) 100%);
+    }
+  }
+  &__price{
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+
+    span{
+      margin-top: -1em;
+      font-size: 2rem;
+      display: block;
+      width: 100%;
+    }
+  }
+  &__feature-list{
+    list-style: none;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+  &__single-feature{
+    display: flex;
+    align-items: center;
+    gap: 1ch;
+    span{
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      flex-grow: 1;
+    }
+    svg{
+      flex-shrink:0;
+      width: 2.4rem;
+      height: 2.4rem;
+      
+    }
+  }
+  &__link{
+    height: auto;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    justify-self: end;
+  }
+}

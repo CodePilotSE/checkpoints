@@ -24,7 +24,7 @@
 
       // package feature rows
       if( have_rows('package-features') ):?>  
-        <div class="package-pricing-block__feature-list"> <?php
+        <ul class="package-pricing-block__feature-list"> <?php
           while( have_rows('package-features') ) : the_row();
           
             $icon = get_sub_field('icon');
@@ -32,23 +32,23 @@
             $icon_url = get_template_directory().'/svg/checkpoints-icons/'. $icon .'.php';
             ?>
 
-            <span class="package-pricing-block__single-feature">
-            <?php 
-              include $icon_url; 
-              echo $feat; 
-              ?>
-            </span>
+            <li class="package-pricing-block__single-feature">
+              <?php  include $icon_url; ?>
+              <span>  <?= $feat; ?> </span>
+            </li>
             <?php
           endwhile; ?> 
-         </div> <?php
+         </ul> <?php
         endif;
         
         // end of package feature rows
 
         if($button):
-          ?><a href="<?= $button['url'] ?>" class="package-pricing-block__link no-external-link-indicator"><button class="button button--no-bg">
+          ?><a href="<?= $button['url'] ?>" class="package-pricing-block__link no-external-link-indicator">
+          <button class="button button--no-bg">
             <?= $button['title']; ?>
-            </button></a>
+            </button>
+          </a>
           <?php
             
         endif;
