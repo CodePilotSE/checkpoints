@@ -4,7 +4,7 @@
 :root {
 
   // Affecting to both main and sub-levels
-  --color-dropdown-toggle: var(--color-valhalla);
+  --color-dropdown-toggle: var(--color-abyss);
   --color-current: var(--color-link-text);
   --dropdown-toggle-size: 1.2rem;
 
@@ -25,8 +25,8 @@
   --padding-sub-menu-link-vertical: .6rem;
   --padding-sub-menu-link-horizontal: 1.5rem;
   --width-sub-menu: 20rem;
-  --color-sub-menu: var(--color-valhalla);
-  --color-hover-sub-menu: var(--color-valhalla);
+  --color-sub-menu: var(--color-abyss);
+  --color-hover-sub-menu: var(--color-abyss);
   --color-background-sub-menu: var(--color-white);
   --gap-dropdown: 1rem;
 }

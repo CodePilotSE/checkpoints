@@ -2,7 +2,7 @@
 @mixin button() {
   appearance: none;
   background-color: var(--color-button-background);
-  background: var(--color-button-gradient);
+  background-image: var(--color-button-gradient);
   border: none;
   border-radius: var(--border-radius-button);
   color: var(--color-button);

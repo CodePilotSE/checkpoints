@@ -3,32 +3,30 @@
 // For AAA: https://www.color-blindness.com/color-name-hue/
 // For AA: https://chir.ag/projects/name-that-color/
 // ------------------------------------------------------
+
 :root {
   // Brand color pool
-  --color-black: #222;
-  --color-black-rock: #2b303c;
-  --color-blue-chalk: #ece6f2;
+  --color-black: map.get($theme-colors, "abyss");
   --color-east-bay: #545773;
   --color-pattens-blue: #eaf1f8;
-  --color-science-blue: #0049d1;
   --color-scorpion: #5f5f5f;
-  --color-valhalla: #2a2d3e;
-  --color-white: #fff;
-  
-  --color-checkpoints-blue: #0084DB;
-  --color-checkpoints-light-blue: #46A6E9;
-  --color-checkpoints-dark-blue: #2C2B77;
-  --color-checkpoints-purple: #472167;
-
+  --color-checkpoints-blue: #0084DB; 
+  --color-medium-blue:      #2A4092; 
+  --color-marine:           #180A6A; 
+  --color-lavendar:         #B085B7;
+  --color-violet:           #5D2AA4;
+  --color-amethyst:         #472167;
+  --color-abyss:            #1A1A39;
+  --color-white:            #FFF;
 
 
   // Main element colors
   --color-heading: var(--color-main);
-  --color-main: var(--color-valhalla);
+  --color-main: var(--color-abyss);
   --color-paragraph: var(--color-east-bay);
 
   // Modern link
-  --color-link-text: var(--color-science-blue);
+  --color-link-text: var(--color-lavendar);
   --color-link-text-hover: var(--color-black);
 
   // Element states
@@ -36,13 +34,14 @@
   --color-success: #21aa14;
 }
 
+// colors for sass loops
 $theme-colors: (
-  "checkpoints-blue": #0084DB, 
-  "medium-blue":      #2A4092, 
-  "marine":           #180A6A, 
-  "lavendar":         #B085B7, 
-  "violet":           #5D2AA4, 
-  "amethyst":         #472167, 
-  "abyss":            #1A1A39, 
-  "white":            #FFF
+"checkpoints-blue": var(--color-checkpoints-blue), 
+"medium-blue":      var(--color-medium-blue),
+"marine":           var(--color-marine),
+"lavendar":         var(--color-lavendar),
+"violet":           var(--color-violet),
+"amethyst":         var(--color-amethyst),
+"abyss":            var(--color-abyss),
+"white":            var(--color-white)
 );
