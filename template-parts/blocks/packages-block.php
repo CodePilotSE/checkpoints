@@ -16,6 +16,8 @@
         $enabled = get_sub_field('enabled');
     ?>
     <div class="<?= $enabled ? '' : 'disabled' ?> package-pricing-block__card">
+      <div class="background-effect" id="up-down"></div>
+      <div class="background-effect" id="left-right"></div>
       <?= $offer ? '<span class="package-pricing-block__offer">'. $offer .'</span>' : '' ?>
       <h2 class="package-pricing-block__title"><?= $title?></h2>
       <span class="package-pricing-block__price"><?= $pricing?></span>

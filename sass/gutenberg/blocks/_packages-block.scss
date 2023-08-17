@@ -11,6 +11,8 @@
   }
 
   &__card{
+    position: relative;
+    overflow: hidden;
     flex: 1;
     min-width: 28rem;
     max-width: 35rem;
@@ -25,26 +27,137 @@
       text-align: center;
       font-size: 2.2rem;
     }
+    *:not(.background-effect){
+      z-index: 2;
+    }
     // card background styles
+    background-size: 800% 800%;
+    animation: gradient 32s ease infinite;
+    .background-effect{
+      position: absolute;
+      border-radius: 50%;
+    }
     &:first-child{
       align-self: stretch;
       @media screen and (min-width: 1211px){
         align-self: center;
       }
-      background: rgb(43,76,155);
-      background: linear-gradient(0deg, rgba(83,81,144,1) 0%, rgba(99,105,124,1) 100%);
+      background-color: rgb(86, 85, 114);
+      .background-effect{
+        display: none;
+      }
     }
     &:nth-child(2){
-      background: rgb(43,76,154);
-      background: linear-gradient(0deg, rgba(43,76,154,1) 0%, rgba(4,133,223,1) 100%);
+      background-color:#0385DF;
+      #up-down{
+        height: 500px;
+        width: 500px;
+        right:0;
+        background-image: linear-gradient(80deg, #1900ff5b, #0008ff6a);
+        filter: blur(80px);
+        animation: core-one 30s infinite;
+      }
+      #left-right{
+        height: 300px;
+        width: 600px;
+        top: -100px;
+        background-image: linear-gradient(80deg, #1372d1, rgba(76, 196, 240, 0.4));
+        filter: blur(100px);
+        animation: core-two 27s .5s infinite;
+      }
     }
     &:nth-child(3){
-      background: rgb(45,43,120);
-      background: linear-gradient(0deg, rgba(45,43,120,1) 0%, rgba(38,73,196,1) 100%);
+      background-color: #2548C3;
+      #up-down{
+        height: 500px;
+        width: 500px;
+        background-image: linear-gradient(80deg, #00ffbf5d, #2987c5);
+        filter: blur(80px);
+        animation: pro-one 11s infinite;
+      }
+      #left-right{
+        height: 300px;
+        width: 600px;
+        top: -100px;
+        background-image: linear-gradient(80deg, #1372d1, rgba(76, 196, 240, 0.4));
+        filter: blur(100px);
+        animation: pro-two 19s .5s infinite;
+      }
     }
     &:nth-child(4){
-      background: rgb(43,75,154);
-      background: linear-gradient(0deg, rgba(44,75,156,1) 0%, rgba(97,24,189,1) 100%);
+      background-color: #6118BD;
+      #left-right {
+        height: 500px;
+        width: 500px;
+        background-image: linear-gradient(80deg, rgba(245, 207, 82, 0.2), rgba(199, 10, 114,.3));
+        filter: blur(80px);
+        animation: enterprise-one 24s infinite;
+      }
+      #up-down{
+        height: 300px;
+        width: 600px;
+        right: -300px;
+        background-image: linear-gradient(80deg, #40107f, rgb(172, 1, 109));
+        filter: blur(100px);
+        animation: enterprise-two 22s .5s infinite;
+      }
+
+
+      @keyframes core-one {
+
+        0% {top: 100%;}
+        45% {top: -100%;}
+        55% {right: 70px;}
+        95% {right: -50px;}
+        100% {top: 100%;}
+        
+      }
+      @keyframes core-two {
+
+        0%,
+        100% {
+          right: -100%;
+          top:30%;
+        }
+    
+        70% {
+          right: 100%;
+          top:50%;
+        }
+      }
+      @keyframes pro-one {
+
+        0% {top: -100%;}
+    
+        100% {top: 100%;}
+      }
+      @keyframes pro-two {
+
+        0%,
+        100% {right: -100%;
+        top:30%;}
+    
+        70% {right: 100%;
+        top:50%;}
+      }
+      @keyframes enterprise-one {
+
+        0%,
+        100% {top: -100%;}
+    
+        70% {top: 100%;}
+      }
+      @keyframes enterprise-two {
+        0%,
+        100%,
+        90% {
+            right: -100px;
+        }
+    
+        70%,30% {
+            right: 300px;
+        }
+      }
     }
   }
   &__price{
