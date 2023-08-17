@@ -1,0 +1,18 @@
+$background-gradients: (
+    ("pruple-to-dark-blue"        , linear-gradient(0deg, rgba(71,33,103,1) 0%, rgba(26,26,57,1) 21%, rgba(35,47,105,1) 78%,  rgba(7,76,153,1) 100%)    , rgb(7,76,153) ), 
+    ("light-blue-to-light-purple" , linear-gradient(125deg, rgba(0,132,219,1) 0%, rgba(42,64,146,1) 32%, rgba(71,51,156,1) 60%, rgba(93,42,164,1) 83%)  , #2a4092), 
+);
+
+@each $gradient-name, $gradient, $fallback-color in $background-gradients {
+  .has-#{$gradient-name}-background {
+    background-color: $fallback-color;
+    background-image: $gradient;
+  }
+}
+  
+@each $color-name, $color-hex in $theme-colors {
+  .has-#{$color-name}-background-color {
+    background-color: $color-hex;
+  }
+}
+  
