@@ -1,4 +1,5 @@
 <?php
+$classes = [];
 $classes[] = 'package-pricing-block';
 if ( ! empty( $block['backgroundColor'] ) ) {
   $classes[] = 'has-background';
