@@ -20,3 +20,7 @@
 .repeat-horizontal .acf-repeater .acf-row-handle.remove {
   border-right: 1px solid #E1E1E1;
 }
+
+.wp-block .is-style-image-left .acf-block-component .acf-block-fields .-r0{
+  float: right!important;
+}
