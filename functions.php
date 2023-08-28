@@ -233,13 +233,18 @@ function theme_custom_gradients()
     add_theme_support('editor-gradient-presets', array(
         array(
             'name' => __('pruple-to-dark-blue', 'your-textdomain'),
-            'gradient' => 'linear-gradient(0deg, rgba(7,76,153,1) 100%, rgba(35,47,105,1) 78%, rgba(26,26,57,1) 21%, rgba(71,33,103,1) 0%)',
+            'gradient' => 'linear-gradient(0deg, var(--color-amethyst) 0%, #232F69 21%, #1A1A39 78%,  #3C2A92 100%)',
             'slug' => 'pruple-to-dark-blue'
         ),
         array(
             'name' => __('light-blue-to-light-purple', 'your-textdomain'),
             'gradient' => 'linear-gradient(125deg, rgba(0,132,219,1) 0%, rgba(42,64,146,1) 32%, rgba(71,51,156,1) 60%, rgba(93,42,164,1) 83%)',
             'slug' => 'light-blue-to-light-purple'
+        ),
+        array(
+            'name' => __('light-blue-to-dark-blue', 'your-textdomain'),
+            'gradient' => 'linear-gradient(0deg, #0380D8 0%, #251D63 100%)',
+            'slug' => 'light-blue-to-dark-blue'
         ),
     ));
 }
