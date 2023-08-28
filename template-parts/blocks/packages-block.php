@@ -18,6 +18,7 @@ $block['style']['color']['background'] ? $background = $block['style']['color'][
 <section class="<?= esc_attr( join( ' ', $classes ) ) ?>" <?= $background ? 'style="background:'. $background .';"':'' ?> >
   <?php 
   if( have_rows('compare-package-pricing') ):
+    ?><div class="<?= $enabled ? '' : 'disabled' ?> package-pricing-block__inner"><?php
     while( have_rows('compare-package-pricing') ) : the_row();
 
         $title = get_sub_field('name');
@@ -76,6 +77,7 @@ $block['style']['color']['background'] ? $background = $block['style']['color'][
     <?php
 
     endwhile;
+    ?></div><?php
 endif;
   
 ?>

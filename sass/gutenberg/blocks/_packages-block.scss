@@ -1,13 +1,16 @@
 .package-pricing-block{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  padding: 6rem clamp-calc($container-mobile, $width-max-article, 10px, 30px);;
-  max-width: 1400px;
-  margin: 0 auto;
-  @media screen and (min-width: 590px) and (max-width: 1210px){
-    max-width: 69rem;
+  &__inner{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 6rem clamp-calc($container-mobile, $width-max-article, 10px, 30px);;
+    max-width: 1400px;
+    margin: 0 auto;
+    @media screen and (min-width: 590px) and (max-width: 1210px){
+      max-width: 69rem;
+    }
   }
 
   &__card{
