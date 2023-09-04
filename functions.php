@@ -298,6 +298,10 @@ function my_theme_add_new_features() {
   add_theme_support( 'editor-color-palette', $newColorPalette);
 }
 add_action( 'after_setup_theme',  __NAMESPACE__ . '\my_theme_add_new_features' );
+
+// add image sizes
+add_image_size( 'feature-heighlight', 400, 350, true );
+
 /**
  * Required files
  */
