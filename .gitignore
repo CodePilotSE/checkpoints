@@ -2,3 +2,6 @@
 /css
 /js/prod
 /js/dev
+/js/dev/front-end.js
+/js/dev/gutenberg-editor.js
+/js/dev/legacy.js
