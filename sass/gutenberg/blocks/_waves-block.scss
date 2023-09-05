@@ -1,5 +1,9 @@
 .wave-block{
   height: fit-content;
+  svg{
+    width: 100%;
+    max-height: 15vw;
+  }
   &.rotation-top svg{
       transform: rotate(180deg);
       margin-top: -1px;
