@@ -1,6 +1,6 @@
 .no-block-padding{
   padding: 0;
-  p{
+  & > p{
     padding: 0 2rem;
   }
 }
