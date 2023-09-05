@@ -1,5 +1,4 @@
 /node_modules
 /css
-/js
 /js/dev/
-js/dev/
+js/prod/
