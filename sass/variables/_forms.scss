@@ -8,10 +8,10 @@
   --color-border-forms: var(--color-paragraph);
   --color-border-forms-focus: var(--color-paragraph);
   --color-button: var(--color-white);
-  --color-button-hover: var(--color-white);
+  --color-button-hover: var(--color-checkpoints-blue);
   --color-button-background: rgb(7,76,153);
-  --color-button-gradient: linear-gradient(311deg, rgba(7,76,153,1) 0%, rgba(4,133,222,1) 100%);
-  --color-button-background-hover: var(--color-abyss);
+  --color-button-gradient: linear-gradient(0deg, #2A4092 0%, #0084DB 100%);
+  --color-button-background-hover: var(--color-white);
   --color-checkbox: var(--color-east-bay);
   --color-checkbox-outline: 0 0 0 3px rgb(84 87 115 / .2);
   --color-checkbox-border-hover: color.adjust(#545773, 15%);

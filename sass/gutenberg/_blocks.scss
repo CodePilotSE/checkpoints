@@ -1,9 +1,9 @@
 // List of all blocks: https://wordpress.org/support/article/blocks/
 // Core blocks only meant for article content
+@import 'gutenberg/blocks/core-buttons';
 .editor-styles-wrapper,
 .article-content {
   @import 'gutenberg/blocks/core-blockquote';
-  @import 'gutenberg/blocks/core-buttons';
   @import 'gutenberg/blocks/core-columns';
   @import 'gutenberg/blocks/core-separator';
   @import 'gutenberg/blocks/core-heading';
