@@ -1,0 +1,10 @@
+.wave-block{
+  height: fit-content;
+  &.rotation-top svg{
+      transform: rotate(180deg);
+      margin-top: -1px;
+  }
+  &.rotation-bottom svg{ margin-bottom: -1px;
+  }
+
+}

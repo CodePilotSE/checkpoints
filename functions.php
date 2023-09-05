@@ -117,6 +117,18 @@ add_action( 'after_setup_theme', function() {
           'jsx' 			      => true,
         ]
       ],
+        [
+        'name'           => 'waves-block',
+        'title'          => 'Vågövergång',
+        'supports'		   => [
+          'color'           => [
+            'background' => true,
+            'gradients' => true,
+          ],
+          'anchor'          => true,
+          'jsx' 			      => true,
+        ]
+      ],
       [
         'name'           => 'feat-highlight-block',
         'title'          => 'Feature hightlight-block',
