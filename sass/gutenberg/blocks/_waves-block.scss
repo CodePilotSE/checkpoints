@@ -8,7 +8,9 @@
       transform: rotate(180deg);
       margin-top: -1px;
   }
-  &.rotation-bottom svg{ margin-bottom: -1px;
+  &.rotation-bottom svg{ 
+    margin-bottom: -1px;
+    display: block;
   }
 
 }
