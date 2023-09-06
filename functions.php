@@ -106,6 +106,19 @@ add_action( 'after_setup_theme', function() {
     // Register custom ACF Blocks
     'acf_blocks' => [
         [
+        'name'           => 'text-and-image-block',
+        'title'          => 'Text och bild',
+        'supports'		   => [
+          'color'           => [
+            'background' => true,
+            'gradients' => true,
+          ],
+          'align' => true,
+          'jsx' => true
+          ],
+          'mode' => 'preview',
+        ],
+        [
         'name'           => 'packages-block',
         'title'          => 'Jämför paket-block',
         'supports'		   => [
