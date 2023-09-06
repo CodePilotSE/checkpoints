@@ -4,13 +4,22 @@ $background-gradients: (
     ("light-blue-to-dark-blue"    , linear-gradient(0deg, #0380D8 0%, #251D63 100%)  , #0380D8), 
 );
 
+// for custom gradients
 @each $gradient-name, $gradient, $fallback-color in $background-gradients {
   .has-#{$gradient-name}-gradient-background {
     background-color: $fallback-color;
     background-image: $gradient;
   }
 }
+// for preset gradients
+@each $gradient-name, $gradient, $fallback-color in $background-gradients {
+  .has-#{$gradient-name}-background {
+    background-color: $fallback-color;
+    background-image: $gradient;
+  }
+}
   
+// for solid colors
 @each $color-name, $color-hex in $theme-colors {
   .has-#{$color-name}-background-color {
     background-color: $color-hex;
