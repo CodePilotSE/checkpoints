@@ -14,7 +14,7 @@
   --padding-main-level-horizontal: 0;
   --padding-main-level-vertical: .6rem;
   --color-main-level: var(--color-black);
-  --color-hover-main-level: var(--color-link-text);
+  --color-hover-main-level: var(--color-white);
   --gap-between-dropdown-toggle: 1.5rem;
   --gap-main-level-horizontal: 2.5rem;
 
@@ -110,9 +110,28 @@
 
   .menu-item > a:hover,
   .menu-item > a:focus {
+    position: relative;
     color: var(--color-hover-main-level);
+      &::after{
+          transform: scaleX(1);
+          transform-origin: bottom left;
+      }
+    }
+    .menu-item > a{
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 3px;
+        bottom: 0px;
+        left: 0;
+        background-color: white;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    
   }
-
   .menu-item .sub-menu a:hover,
   .menu-item .sub-menu a:focus {
     color: var(--color-hover-sub-menu);
