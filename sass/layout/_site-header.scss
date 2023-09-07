@@ -2,20 +2,28 @@
 // the site navigation and search for example.
 .site-header {
   align-items: center;
+  gap: 2rem;
   display: flex;
   justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
+  transform: translate(-50%);
+  left: 50%;
   max-width: $width-grid-base;
   padding-bottom: var(--padding-site-header-vertical);
   padding-left: var(--padding-container-horizontal);
   padding-right: var(--padding-container-horizontal);
   padding-top: var(--padding-site-header-vertical);
   position: relative;
+  width: 100%;
   z-index: 15;
 
   @media (max-width: $width-max-mobile) {
     --padding-container-horizontal: 2rem;
+  }
+}
+
+.site-branding{
+  svg{
+    height: 4rem;
   }
 }
 
