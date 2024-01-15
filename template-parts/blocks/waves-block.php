@@ -19,6 +19,9 @@ if ( ! empty( $block['gradient'] ) ) {
   $classes[] = 'has-gradient';
   $classes[] = 'has-'.$block['gradient'].'-background';
 }
+$classes[] = 'col-1-' . $color_one;
+$classes[] = 'col-2-' . $color_two;
+
 
 $block['style']['color']['gradient'] ? $background = $block['style']['color']['gradient']: '';
 $block['style']['color']['background'] ? $background = $block['style']['color']['background']: '';
@@ -27,7 +30,6 @@ $block['style']['color']['background'] ? $background = $block['style']['color'][
 
 <section class="<?= esc_attr( join( ' ', $classes ) ) ?>" <?= $background ? 'style="background:'. $background .';"':'' ?> >
   <?php
-  
   include $selected_wave_url;
   ?>
 

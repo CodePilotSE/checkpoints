@@ -2,7 +2,8 @@
   height: fit-content;
   svg{
     width: 100%;
-    max-height: 15vw;
+    height: 15vw;
+    max-height: 8rem;
   }
   &.rotation-top svg{
       transform: rotate(180deg);
@@ -13,4 +14,21 @@
     display: block;
   }
 
+  .editor-styles-wrapper &{
+    &.rotation-bottom:last-child{
+      margin-bottom: 0;
+    }
+    &.rotation-top:first-child{
+      margin-top: 0;
+    }
+    @each $color-name, $color-hex in $theme-colors {
+      &.col-1-#{$color-name} .wave-1{
+        fill: $color-hex;
+      }
+      &.col-2-#{$color-name} .wave-2{
+        fill: $color-hex;
+      }
+    }
+  }
+    
 }
