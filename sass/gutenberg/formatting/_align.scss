@@ -35,7 +35,7 @@
     padding-right: var(--padding-container-horizontal);
     width: 100%;
 
-    @media (min-width: $width-wide + 40px) {
+    @media (min-width: ($width-wide + 40px)) {
       padding-left: 0;
       padding-right: 0;
     }
@@ -51,11 +51,16 @@
       border-radius: 0;
     }
 
-    @media (min-width: $width-max-article + 40px) {
+    @media (min-width: ($width-max-article + 40px)) {
       margin-bottom: var(--padding-block);
       margin-top: var(--padding-block);
       max-width: $width-full;
       width: $width-full;
     }
   }
+  [data-align="full"] > .block-editor-block-list__block{
+    padding: 0;
+    width: 100%;
+  }
+  
 }
