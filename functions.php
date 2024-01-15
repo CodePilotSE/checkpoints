@@ -97,7 +97,7 @@ add_action( 'after_setup_theme', function() {
      * https://github.com/digitoimistodude/checkpoints#custom-post-types
      */
     'post_types' => [
-      // 'Your_Post_Type',
+      'cp_testimonials',
     ],
 
     /**
