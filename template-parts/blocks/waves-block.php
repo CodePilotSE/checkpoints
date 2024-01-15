@@ -10,7 +10,7 @@ $selected_wave_url = get_theme_file_path().'/svg/waves/'.$selected_wave.'.php';
 $classes = [];
 
 isset($rotation) && $rotation ? $classes[] = 'rotation-'. $rotation: '';
-$classes[] = 'wave-block';
+$classes[] = 'wave-block alignfull';
 if ( ! empty( $block['backgroundColor'] ) ) {
   $classes[] = 'has-background';
   $classes[] = 'has-' . $block['backgroundColor'] . '-background-color';
