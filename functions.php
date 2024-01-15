@@ -131,6 +131,18 @@ add_action( 'after_setup_theme', function() {
         ]
       ],
         [
+        'name'           => 'testimonials-block',
+        'title'          => 'Omdömmen',
+        'supports'		   => [
+          'color'           => [
+            'background' => true,
+            'gradients' => true,
+          ],
+          'anchor'          => true,
+          'jsx' 			      => true,
+        ]
+      ],
+        [
         'name'           => 'waves-block',
         'title'          => 'Vågövergång',
         'supports'		   => [
