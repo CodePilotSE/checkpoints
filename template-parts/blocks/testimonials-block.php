@@ -16,17 +16,35 @@ $block['style']['color']['gradient'] ? $background = $block['style']['color']['g
 $block['style']['color']['background'] ? $background = $block['style']['color']['background']: '';
 ?>
 <section class="<?= esc_attr( join( ' ', $classes ) ) ?>" <?= $background ? 'style="background:'. $background .';"':'' ?> >
-<div class="testamonials">
-  <?php 
-  // build post type and query it
-  $a = ['a','b','c'];
-  foreach($a as $b): ?>
-    <div class="testamonials">
-      <h6>Good job!</h6>  
-      <img src="" alt="">
-      <span>Name</span>
-      <span>Workplace</span>
-    </div>
-      <?php endforeach?>
-    </div>
+  <div class="testamonials">
+    <?php 
+    // build post type and query it
+    $args = array(
+      'post_type'   =>  'cp_testimonials',
+      'posts_per_page'  =>  3,
+      'orderby'     => 'rand'
+      );
+    $the_query = new WP_Query( $args );
+    
+    echo '<pre>';
+    // print_r($the_query);
+    echo '</pre>';
+    if ( $the_query->have_posts() ) : 
+      while ( $the_query->have_posts() ) :
+        $the_query->the_post();
+        global $post;
+
+        $name    =  get_field('testimonial-name', $post->ID);
+        $company =  get_field('testimonial-company', $post->ID);
+        ?>
+        <div class="testamonials">
+          <h6><?= get_the_title() ?></h6>  
+
+          <?= get_the_post_thumbnail('','thumbnail') ?>
+          <?= !empty($name)    ? '<span>'. $name    . '</span>' : '' ?>
+          <?= !empty($company) ? '<span>'. $company . '</span>' : '' ?>
+        </div>
+      <?php endwhile?>
+    <?php endif?>
+  </div>
 </section>

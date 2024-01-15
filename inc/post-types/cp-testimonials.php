@@ -20,7 +20,7 @@ class cp_testimonials extends Post_Type {
 
     $generated_labels = [
       'menu_name'          => __( 'Omdömen', 'checkpoints' ),
-      'name'               => _x( 'Omdömens', 'post type general name', 'checkpoints' ),
+      'name'               => _x( 'Omdömen', 'post type general name', 'checkpoints' ),
       'singular_name'      => _x( 'Omdöme', 'post type singular name', 'checkpoints' ),
       'name_admin_bar'     => _x( 'Omdömen', 'add new on admin bar', 'checkpoints' ),
       'add_new'            => _x( 'Lägg till nytt', 'thing', 'checkpoints' ),
@@ -37,7 +37,7 @@ class cp_testimonials extends Post_Type {
     $args = [
       'labels'              => $generated_labels,
       'menu_icon'           => null,
-      'public'              => false,
+      'public'              => true,
       'show_ui'             => true,
       'has_archive'         => false,
       'exclude_from_search' => true,
