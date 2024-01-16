@@ -1,0 +1,17 @@
+.clients-block{
+  padding-top: var(--padding-container-vertical);
+  padding-bottom: var(--padding-container-vertical);
+  &__inner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    gap: 6rem;
+    flex-wrap: wrap;
+    max-width: $width-wide;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__link{
+    display: block;
+  }
+}
