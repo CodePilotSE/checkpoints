@@ -6,9 +6,9 @@
  */
 // Declare the blocks you'd like to style.
 // eslint-disable-next-line
-wp.blocks.registerBlockStyle('core/paragraph', {
-  name: 'boxed',
-  label: 'Laatikko',
+wp.blocks.registerBlockStyle('acf/feat-highlight-block', {
+  name: 'image-left',
+  label: 'Bild till vänster',
 });
 
 // When document is ready as in when blocks are fully loaded

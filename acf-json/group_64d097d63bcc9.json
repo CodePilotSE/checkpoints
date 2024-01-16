@@ -1,0 +1,305 @@
+{
+    "key": "group_64d097d63bcc9",
+    "title": "Jämför paket - startsidan",
+    "fields": [
+        {
+            "key": "field_64d097d696527",
+            "label": "Jämför paket",
+            "name": "compare-package-pricing",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "repeat-horizontal",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 4,
+            "max": 4,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_5efdaeb81b607",
+                    "label": "Paketnamn",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64d097d696527"
+                },
+                {
+                    "key": "field_6228ca946b337",
+                    "label": "Erbjudande",
+                    "name": "offer",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Skriv in namnet på erbjudandet",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64d097d696527"
+                },
+                {
+                    "key": "field_5efdaef41b608",
+                    "label": "Pricing",
+                    "name": "pricing",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_64d097d696527"
+                },
+                {
+                    "key": "field_6229eaa5a9665",
+                    "label": "Rabattpris",
+                    "name": "sale-price",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "(om det finns något)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64d097d696527"
+                },
+                {
+                    "key": "field_5efdaf2b1b609",
+                    "label": "Beskrivning",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64d097d696527"
+                },
+                {
+                    "key": "field_5efdaf351b60a",
+                    "label": "Paket-features",
+                    "name": "package-features",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Lägg till rad",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_5efdaf531b60b",
+                            "label": "Icon",
+                            "name": "icon",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Check": "Check",
+                                "Star": "Star",
+                                "Cross": "Cross"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": "",
+                            "parent_repeater": "field_5efdaf351b60a"
+                        },
+                        {
+                            "key": "field_5efdaf7b1b60c",
+                            "label": "Feature namn",
+                            "name": "single-feature",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_5efdaf351b60a"
+                        }
+                    ],
+                    "parent_repeater": "field_64d097d696527"
+                },
+                {
+                    "key": "field_64d0b935d64f3",
+                    "label": "Fler features text",
+                    "name": "more-features-text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64d097d696527"
+                },
+                {
+                    "key": "field_5efdafb11b60d",
+                    "label": "Knapplänk",
+                    "name": "button-link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_64d097d696527"
+                },
+                {
+                    "key": "field_5f3a2cb940ee4",
+                    "label": "Aktivt paket",
+                    "name": "enabled",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui_on_text": "Enabled",
+                    "ui_off_text": "Disabled",
+                    "ui": 1,
+                    "parent_repeater": "field_64d097d696527"
+                },
+                {
+                    "key": "field_64d0bbed68ca0",
+                    "label": "",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "acfe_column",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_save_meta": 0,
+                    "columns": "6\/12",
+                    "endpoint": 0,
+                    "parent_repeater": "field_64d097d696527"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/packages-block"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1692101378
+}

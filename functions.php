@@ -97,7 +97,7 @@ add_action( 'after_setup_theme', function() {
      * https://github.com/digitoimistodude/checkpoints#custom-post-types
      */
     'post_types' => [
-      // 'Your_Post_Type',
+      'cp_testimonials',
     ],
 
     /**
@@ -105,17 +105,67 @@ add_action( 'after_setup_theme', function() {
      */
     // Register custom ACF Blocks
     'acf_blocks' => [
-      // [
-      //   'name'           => 'block-file-slug',
-      //   'title'          => 'Block Visible Name',
-      //   // You can safely remove lines below if you find no use for them
-      //   'prevent_cache'  => false, // Defaults to false,
-      //   // Icon defaults to svg file inside svg/block-icons named after the block name,
-      //   // eg. svg/block-icons/block-file-slug.svg
-      //   //
-      //   // Icon setting defines the dashicon equivalent: https://developer.wordpress.org/resource/dashicons/#block-default
-      //   // 'icon'  => 'block-default',
-      // ],
+        [
+        'name'           => 'text-and-image-block',
+        'title'          => 'Text och bild',
+        'supports'		   => [
+          'color'           => [
+            'background' => true,
+            'gradients' => true,
+          ],
+          'align' => true,
+          'jsx' => true
+          ],
+          'mode' => 'preview',
+        ],
+        [
+        'name'           => 'packages-block',
+        'title'          => 'Jämför paket-block',
+        'supports'		   => [
+          'color'           => [
+            'background' => true,
+            'gradients' => true,
+          ],
+          'anchor'          => true,
+          'jsx' 			      => true,
+        ]
+      ],
+        [
+        'name'           => 'testimonials-block',
+        'title'          => 'Omdömmen',
+        'supports'		   => [
+          'color'           => [
+            'background' => true,
+            'gradients' => true,
+          ],
+          'anchor'          => true,
+          'jsx' 			      => true,
+        ]
+      ],
+        [
+        'name'           => 'waves-block',
+        'title'          => 'Vågövergång',
+        'supports'		   => [
+          'color'           => [
+            'background' => true,
+            'gradients' => true,
+          ],
+          'anchor'          => true,
+          'jsx' 			      => true,
+        ]
+      ],
+      [
+        'name'           => 'feat-highlight-block',
+        'title'          => 'Feature hightlight-block',
+        'supports'		   => [
+          'color'           => [
+            'background' => true,
+            'gradients' => true,
+          ],
+          'anchor'          => true,
+          'jsx' 			      => true,
+        ]
+      ],
     ],
 
     // Custom ACF block default settings
@@ -127,6 +177,11 @@ add_action( 'after_setup_theme', function() {
         'page',
       ],
       'supports'  => [
+        'color'           => [
+          'background' => true,
+          'gradients' => true,
+
+        ],
         'align'           => false,
         'anchor'          => true,
         'customClassName' => false,
@@ -137,44 +192,58 @@ add_action( 'after_setup_theme', function() {
     // Restrict to only selected blocks
     // Set the value to 'all' to allow all blocks everywhere
    'allowed_blocks' => [
-      'default' => [
-      ],
-      'post' => [
-        'core/archives',
-        'core/audio',
-        'core/buttons',
-        'core/categories',
-        'core/code',
-        'core/column',
-        'core/columns',
-        'core/coverImage',
-        'core/embed',
-        'core/file',
-        'core/freeform',
-        'core/gallery',
-        'core/heading',
-        'core/html',
-        'core/image',
-        'core/latestComments',
-        'core/latestPosts',
-        'core/list',
-        'core/list-item',
-        'core/more',
-        'core/nextpage',
-        'core/paragraph',
-        'core/preformatted',
-        'core/pullquote',
-        'core/quote',
-        'core/block',
-        'core/separator',
-        'core/shortcode',
-        'core/spacer',
-        'core/subhead',
-        'core/table',
-        'core/textColumns',
-        'core/verse',
-        'core/video',
-      ],
+    'default' => [
+      'core/gallery',
+      'core/buttons',
+      'core/list',
+      'core/image',
+      'core/block',
+      'core/paragraph',
+      'core/heading',
+      'core/video',
+      'core/spacer',
+      'core/file',
+      'core/subhead',
+      'core/quote',
+      'core/group',
+      
+    ],
+    'post' => [
+      'core/archives',
+      'core/audio',
+      'core/buttons',
+      'core/categories',
+      'core/code',
+      'core/column',
+      'core/columns',
+      'core/coverImage',
+      'core/embed',
+      'core/file',
+      'core/freeform',
+      'core/gallery',
+      'core/heading',
+      'core/html',
+      'core/image',
+      'core/latestComments',
+      'core/latestPosts',
+      'core/list',
+      'core/list-item',
+      'core/more',
+      'core/nextpage',
+      'core/paragraph',
+      'core/preformatted',
+      'core/pullquote',
+      'core/quote',
+      'core/block',
+      'core/separator',
+      'core/shortcode',
+      'core/spacer',
+      'core/subhead',
+      'core/table',
+      'core/textColumns',
+      'core/verse',
+      'core/video',
+    ],
     ],
 
     // If you want to use classic editor somewhere, define it here
@@ -188,6 +257,87 @@ add_action( 'after_setup_theme', function() {
 
   define( 'THEME_SETTINGS', $theme_settings );
 } ); // end action after_setup_theme
+
+function admin_theme_style()
+{
+  wp_enqueue_style( 'admin-theme', get_stylesheet_directory_uri() . '/admin/admin.css' );
+}
+add_action('admin_enqueue_scripts', __NAMESPACE__ . '\admin_theme_style');
+add_action('login_enqueue_scripts', __NAMESPACE__ . '\admin_theme_style');
+
+function theme_custom_gradients()
+{
+    add_theme_support('editor-gradient-presets', array(
+        array(
+            'name' => __('pruple-to-dark-blue', 'your-textdomain'),
+            'gradient' => 'linear-gradient(0deg, var(--color-amethyst) 0%, #232F69 21%, #1A1A39 78%,  #3C2A92 100%)',
+            'slug' => 'pruple-to-dark-blue'
+        ),
+        array(
+            'name' => __('light-blue-to-light-purple', 'your-textdomain'),
+            'gradient' => 'linear-gradient(125deg, rgba(0,132,219,1) 0%, rgba(42,64,146,1) 32%, rgba(71,51,156,1) 60%, rgba(93,42,164,1) 83%)',
+            'slug' => 'light-blue-to-light-purple'
+        ),
+        array(
+            'name' => __('light-blue-to-dark-blue', 'your-textdomain'),
+            'gradient' => 'linear-gradient(0deg, #0380D8 0%, #251D63 100%)',
+            'slug' => 'light-blue-to-dark-blue'
+        ),
+    ));
+}
+add_action('after_setup_theme', __NAMESPACE__ . '\theme_custom_gradients');
+
+function my_theme_add_new_features() {
+  // The new colors we are going to add
+  $newColorPalette = [
+      [
+          'name' => esc_attr__('Checkpoints-blå', 'default'),
+          'slug' => 'checkpoints-blue',
+          'color' => '#0084DB',
+      ],
+      [
+          'name' => esc_attr__('Blå', 'default'),
+          'slug' => 'medium-blue',
+          'color' => '#2A4092',
+      ],
+      [
+          'name' => esc_attr__('Mörkblå', 'default'),
+          'slug' => 'marine',
+          'color' => '#180A6A',
+      ],
+      [
+          'name' => esc_attr__('Lavender', 'default'),
+          'slug' => 'lavendar',
+          'color' => '#B085B7',
+      ],
+      [
+          'name' => esc_attr__('Violet', 'default'),
+          'slug' => 'violet',
+          'color' => '#5D2AA4',
+      ],
+      [
+          'name' => esc_attr__('Amethyst', 'default'),
+          'slug' => 'amethyst',
+          'color' => '#472167',
+      ],
+      [
+          'name' => esc_attr__('Abyss', 'default'),
+          'slug' => 'abyss',
+          'color' => '#1A1A39',
+      ],
+      [
+          'name' => esc_attr__('White', 'default'),
+          'slug' => 'white',
+          'color' => '#FFF',
+      ],
+  ];
+  // Apply the color palette containing the original colors and 2 new colors:
+  add_theme_support( 'editor-color-palette', $newColorPalette);
+}
+add_action( 'after_setup_theme',  __NAMESPACE__ . '\my_theme_add_new_features' );
+
+// add image sizes
+add_image_size( 'feature-heighlight', 400, 350, true );
 
 /**
  * Required files

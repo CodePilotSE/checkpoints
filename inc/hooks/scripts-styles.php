@@ -35,6 +35,10 @@ function enqueue_theme_scripts() {
     filemtime( get_theme_file_path( get_asset_file( 'global.css' ) ) )
   );
 
+  // fonts 
+  wp_enqueue_style( 'open-sans', get_theme_file_uri( 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap' ),[] , filemtime( get_theme_file_path( get_asset_file( 'global.css' ) ) )
+  );
+
   // Enqueue jquery and front-end.js
   wp_enqueue_script( 'jquery-core' );
   wp_enqueue_script( 'scripts',

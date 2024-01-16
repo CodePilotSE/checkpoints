@@ -79,7 +79,7 @@
   .wp-block-text-columns,
   .wp-block-gallery,
   .wp-block.editor-post-title {
-    @media (max-width: $width-max-article + 40px) {
+    @media (max-width: ($width-max-article + 40px)) {
       padding-left: var(--padding-container-horizontal);
       padding-right: var(--padding-container-horizontal);
       width: 100%;
@@ -207,8 +207,12 @@
   // Font smoothing
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  max-width: $width-max-article;
 
   // stylelint-disable-next-line value-keyword-case
   text-rendering: geometricPrecision;
+}
+
+html :where(.wp-block) {
+  margin-top: 0;
+  margin-bottom: 0;
 }

@@ -110,6 +110,7 @@ export function styleExternalLinks() {
       'no-external-link-indicator',
       'global-link',
       'button',
+      'nav-link'
     ];
 
     if (!classExceptions.some((className) => externalLink.classList.contains(className))) {

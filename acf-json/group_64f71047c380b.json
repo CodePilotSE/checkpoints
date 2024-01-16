@@ -1,0 +1,148 @@
+{
+    "key": "group_64f71047c380b",
+    "title": "Waves block",
+    "fields": [
+        {
+            "key": "field_64f711297c3c6",
+            "label": "Vågtyp",
+            "name": "waves-selected-wave",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "waves-single": "Singelvåg",
+                "waves-double": "Dubbelvåg"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_64f710487c3c3",
+            "label": "Rotation",
+            "name": "waves-rotation",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top": "Topplacerad",
+                "bottom": "Bottenplacerad"
+            },
+            "default_value": "top",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_64f710cd7c3c4",
+            "label": "Bakgrund 1",
+            "name": "waves-background",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "checkpoints-blue": "Checkpointsblå",
+                "medium-blue": "Mediumblå",
+                "marine": "Marine",
+                "lavendar": "Lavender",
+                "violet": "Violett",
+                "amethyst": "Ametist",
+                "abyss": "Abyss",
+                "white": "Vit"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_64f717a55a56f",
+            "label": "Bakgrund 2",
+            "name": "waves-background-two",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64f711297c3c6",
+                        "operator": "==",
+                        "value": "waves-double"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "checkpoints-blue": "Checkpointsblå",
+                "medium-blue": "Mediumblå",
+                "marine": "Marine",
+                "lavendar": "Lavender",
+                "violet": "Violett",
+                "amethyst": "Ametist",
+                "abyss": "Abyss",
+                "white": "Vit"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/waves-block"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1693916477
+}
