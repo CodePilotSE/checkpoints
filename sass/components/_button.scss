@@ -1,11 +1,10 @@
 // stylelint-disable number-max-precision, rem-over-px/rem-over-px
 @mixin button() {
   appearance: none;
-  background-color: var(--color-button-background);
-  background-image: var(--color-button-gradient);
+  background-color: var(--color-white);
   border: none;
   border-radius: var(--border-radius-button);
-  color: var(--color-button);
+  color: var(--color-marine);
   cursor: pointer;
   display: inline-block;
   font-family: var(--font-paragraph);
