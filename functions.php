@@ -155,6 +155,18 @@ add_action( 'after_setup_theme', function() {
         ]
       ],
       [
+        'name'           => 'clients-block',
+        'title'          => 'Kunder',
+        'supports'		   => [
+          'color'           => [
+            'background' => true,
+            'gradients' => true,
+          ],
+          'anchor'          => true,
+          'jsx' 			      => true,
+        ]
+      ],
+      [
         'name'           => 'feat-highlight-block',
         'title'          => 'Feature hightlight-block',
         'supports'		   => [
