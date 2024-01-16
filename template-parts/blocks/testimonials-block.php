@@ -2,7 +2,7 @@
 $size = 'thumbnail';
 
 $classes = [];
-$classes[] = 'testimonials-wrapper';
+$classes[] = 'testimonials-block';
 if ( ! empty( $block['backgroundColor'] ) ) {
   $classes[] = 'has-background';
   $classes[] = 'has-' . $block['backgroundColor'] . '-background-color';
@@ -16,7 +16,7 @@ $block['style']['color']['gradient'] ? $background = $block['style']['color']['g
 $block['style']['color']['background'] ? $background = $block['style']['color']['background']: '';
 ?>
 <section class="<?= esc_attr( join( ' ', $classes ) ) ?>" <?= $background ? 'style="background:'. $background .';"':'' ?> >
-  <div class="testimonials-block">
+  <div class="testimonials-inner">
     <?php 
     // build post type and query it
     $args = array(
