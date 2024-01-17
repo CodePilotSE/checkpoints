@@ -39,6 +39,9 @@
         align-self: center;
       }
     }
+    &.disabled >*{
+      opacity: 40%;
+    }
   }
   // card background styles
   @import 'helpers/_background-animations.scss';
