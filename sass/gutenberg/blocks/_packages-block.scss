@@ -207,5 +207,8 @@
     width: fit-content;
     margin: auto;
     justify-self: end;
+    .package-pricing-block & button{
+      color: var(--color-white);
+    }
   }
 }
