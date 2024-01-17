@@ -2,34 +2,32 @@
   padding: 6rem clamp-calc($container-mobile, $width-max-article, 10px, 30px);
   &__inner{
 
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+    grid-template-rows: auto auto 1fr auto;
     gap: 1rem;
-    justify-content: center;
     max-width: $width-wide;
     margin: 0 auto;
     @media screen and (min-width: 590px) and (max-width: 1210px){
       max-width: 69rem;
     }
   }
-
+  
   &__card{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: subgrid;
+    grid-template-rows: subgrid;
+    grid-row: 1 / -1;
     position: relative;
     overflow: hidden;
     flex: 1;
-    min-width: 28rem;
-    max-width: 35rem;
-    display: grid;
     align-items: center;
     grid-template-columns: 1fr;
     border-radius: 1rem;
     padding: 4rem 2rem;
     color: var(--color-white);
-    h2{
-      color: var(--color-white);
-      text-align: center;
-      font-size: 2.2rem;
-    }
+    
     *:not(.background-effect){
       z-index: 2;
     }
@@ -41,6 +39,7 @@
       border-radius: 50%;
     }
     &:first-child{
+      grid-template-rows: repeat(4, auto);
       align-self: stretch;
       @media screen and (min-width: 1211px){
         align-self: center;
@@ -163,13 +162,20 @@
       }
     }
   }
+  &__title{
+    color: var(--color-white);
+    text-align: center;
+    font-size: 2.2rem;
+    grid-row: 1 / 2;
+  }
   &__price{
+    grid-row: 2 / 3;
     font-size: 4rem;
     font-weight: 700;
     text-align: center;
-
+    line-height: 1.2;
+    align-self: baseline;
     span{
-      margin-top: -1em;
       font-size: 2rem;
       display: block;
       width: 100%;
@@ -184,6 +190,7 @@
     margin-bottom: 4rem;
   }
   &__single-feature{
+    grid-row: 3 / 4;
     display: flex;
     align-items: center;
     gap: 1ch;
@@ -202,6 +209,7 @@
     }
   }
   &__link{
+    grid-row: 4 / 5;
     height: auto;
     display: block;
     width: fit-content;
