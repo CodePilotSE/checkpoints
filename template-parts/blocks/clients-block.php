@@ -12,10 +12,10 @@ if ( ! empty( $block['gradient'] ) ) {
   $classes[] = 'has-'.$block['gradient'].'-background';
 }
 
-$block['style']['color']['gradient'] ? $background = $block['style']['color']['gradient']: '';
-$block['style']['color']['background'] ? $background = $block['style']['color']['background']: '';
+!empty($block['style']['color']['gradient']) ? $background = $block['style']['color']['gradient']: '';
+!empty($block['style']['color']['background']) ? $background = $block['style']['color']['background']: '';
 ?>
-<section class="<?= esc_attr( join( ' ', $classes ) ) ?>" <?= $background ? 'style="background:'. $background .';"':'' ?> >
+<section class="<?= esc_attr( join( ' ', $classes ) ) ?>" <?= !empty($background) ? 'style="background:'. $background .';"':'' ?> >
   <?php if( have_rows('clients-repeater') ): ?>
     <div class="clients-block__inner">
       <?php

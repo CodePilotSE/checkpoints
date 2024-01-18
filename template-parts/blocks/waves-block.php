@@ -23,12 +23,12 @@ $classes[] = 'col-1-' . $color_one;
 $classes[] = 'col-2-' . $color_two;
 
 
-$block['style']['color']['gradient'] ? $background = $block['style']['color']['gradient']: '';
-$block['style']['color']['background'] ? $background = $block['style']['color']['background']: '';
+!empty($block['style']['color']['gradient'])? $background = $block['style']['color']['gradient']: '';
+!empty($block['style']['color']['background']) ? $background = $block['style']['color']['background']: '';
 ?>
 
 
-<section class="<?= esc_attr( join( ' ', $classes ) ) ?>" <?= $background ? 'style="background:'. $background .';"':'' ?> >
+<section class="<?= esc_attr( join( ' ', $classes ) ) ?>" <?= !empty($background) ? 'style="background:'. $background .';"':'' ?> >
   <?php
   include $selected_wave_url;
   ?>
