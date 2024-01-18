@@ -62,9 +62,9 @@ if ( ! empty( $block['gradient'] ) ) {
         // end of package feature rows
 
         if($button):
-          ?><a href="<?=  $button['url']  ?>" aria-disabled="<?= $enabled ? 'false' :'true' ?>" target="_blank" class="package-pricing-block__link no-external-link-indicator">
-          <button class="button button--no-bg">
-            <?= $button['title']; ?>
+          ?><a href="<?=  $button['url']  ?>" target="_blank" class="package-pricing-block__link no-external-link-indicator">
+            <button class="button button--no-bg">
+              <?= $button['title']; ?>
             </button>
           </a>
           <?php
