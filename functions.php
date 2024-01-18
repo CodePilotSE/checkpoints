@@ -212,6 +212,8 @@ add_action( 'after_setup_theme', function() {
       'core/image',
       'core/block',
       'core/cover',
+      'core/columns',
+      'core/column',
       'core/paragraph',
       'core/heading',
       'core/video',
