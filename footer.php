@@ -37,15 +37,21 @@ namespace Air_Light;
     'posts_per_page' => 1,
 );
 $query = new \WP_Query( $args );
-
+?>
+<div class="footer-content">
+  <?php
 if ( $query->have_posts() ) {
-    while ( $query->have_posts() ) {
-        $query->the_post();
-        the_content(); 
-    }
-    wp_reset_postdata();
+  while ( $query->have_posts() ) {
+    $query->the_post();
+    the_content(); 
+  }
+  wp_reset_postdata();
 }
 ?>
+</div>
+<div class="copi-link-wrapper">
+  <a class="copi-link no-external-link-indicator" href="https://codepilot.se/"><?= __('Checkpoints är en produkt utvecklad av Codepilot AB', 'checkpoints') ?></a>
+</div>
 
 </footer><!-- #colophon -->
 
