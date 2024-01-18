@@ -98,6 +98,7 @@ add_action( 'after_setup_theme', function() {
      */
     'post_types' => [
       'cp_testimonials',
+      'cp_block_areas',
     ],
 
     /**
@@ -315,6 +316,27 @@ add_action( 'after_setup_theme',  __NAMESPACE__ . '\my_theme_add_new_features' )
 // add image sizes
 add_image_size( 'feature-heighlight', 400, 350, true );
 
+function get_footer_edit_id() {
+  $slug = 'footer';
+  $post_type = 'cp_block_areas';
+  $post = get_page_by_path($slug, OBJECT, $post_type);
+  $post_id = false;
+
+  if($post):
+    $post_id = $post->ID;
+  endif;
+  return $post_id;
+}
+
+  
+function add_custom_menu_link(){
+  $post_id = get_footer_edit_id();
+  if(!empty($post_id)):
+    $url = get_edit_post_link($post_id); 
+    add_menu_page('edit_footer', __('Sidfot', 'checkpoints'), 'edit_others_posts', $url, '', 'dashicons-admin-generic', 999);
+  endif;
+}
+add_action('admin_menu', __NAMESPACE__ . '\add_custom_menu_link');
 /**
  * Required files
  */
