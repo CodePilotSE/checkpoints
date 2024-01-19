@@ -13,5 +13,14 @@
   }
   &__link{
     display: block;
+    height: fit-content;
+    width: fit-content;
+  }
+  img{
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 22rem;
+    max-height: 11rem;
   }
 }
