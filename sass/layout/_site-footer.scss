@@ -1,5 +1,6 @@
 .site-footer{
   background-color: var(--color-abyss);
+  padding: 2rem;
   padding-top: 3rem;
   .footer-edit-link{
     text-align: center;
@@ -8,7 +9,7 @@
     margin-right: auto;
     color: var(--color-white);
     padding: 1rem;
-    margin: 0 2rem 2rem 2rem;
+    margin-bottom: 2rem;
     border: 3px dashed color-mix(in srgb, transparent 60%, var(--color-white));
     font-weight: 700;
 
@@ -19,14 +20,17 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .copi-link{
-    max-width: $width-wide;
+  .copi-link-wrapper{
     margin-left: auto;
     margin-right: auto;
     text-align: end;
     display: block;
-    padding-top: 2rem;
     padding-bottom: 3rem;
-    width: fit-content;
+    padding-top: 2rem;
+    max-width: $width-wide;
+
+  }
+  p:first-child{
+    margin-top: 0;
   }
 }
