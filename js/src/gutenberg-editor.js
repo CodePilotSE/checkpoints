@@ -10,6 +10,10 @@ wp.blocks.registerBlockStyle('acf/feat-highlight-block', {
   name: 'image-left',
   label: 'Bild till vänster',
 });
+wp.blocks.registerBlockStyle('core/media-text', {
+  name: 'overlapping',
+  label: 'Överlappande',
+});
 
 // When document is ready as in when blocks are fully loaded
 window.addEventListener('load', () => {

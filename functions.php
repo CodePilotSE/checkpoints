@@ -216,6 +216,7 @@ add_action( 'after_setup_theme', function() {
       'core/column',
       'core/paragraph',
       'core/heading',
+      'core/media-text',
       'core/video',
       'core/spacer',
       'core/file',

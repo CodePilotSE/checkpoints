@@ -6,7 +6,7 @@
   // Paddings
   --padding-container-horizontal: 2rem;
   --padding-container-horizontal-large: 6.4rem;
-  --padding-container-vertical: 6.4rem;
+  --padding-container-vertical: 2rem;
   --padding-site-header-vertical: 2rem;
   --padding-block: 8rem;
 
@@ -37,16 +37,10 @@
 
   @media (max-width: $container-ipad) {
     --grid-gap: var(--padding-container-horizontal);
-    --padding-container-vertical: 5rem;
   }
 
   // Between iPad and a mobile phone
   @media (max-width: 600px) {
     --padding-block: 6rem;
-  }
-
-  // Vars in mobile
-  @media (max-width: $container-mobile) {
-    --padding-container-vertical: 4rem;
   }
 }
