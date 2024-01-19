@@ -1,5 +1,4 @@
 .package-pricing-block{
-  padding: 6rem clamp-calc($container-mobile, $width-max-article, 10px, 30px);
   &__inner{
     display: grid;
     gap: 1rem;
