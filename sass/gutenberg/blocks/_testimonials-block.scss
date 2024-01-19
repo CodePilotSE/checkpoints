@@ -1,11 +1,12 @@
 .testimonials-block{
   --testimonials-gap: 2rem;
   width: fit-content;
+  max-width: 100%;
   margin: var(--padding-container-vertical) auto;
 }
 .testimonials-inner{
   max-width: $width-wide;
-  width: fit-content;
+  width: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
