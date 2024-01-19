@@ -17,13 +17,14 @@
   --color-violet:           #5D2AA4;
   --color-amethyst:         #472167;
   --color-abyss:            #1A1A39;
+  --color-abyss-light:      #46465F;
   --color-white:            #FFF;
 
 
   // Main element colors
   --color-heading: var(--color-white);
   --color-main: var(--color-abyss);
-  --color-paragraph: var(--color-white);
+  --color-paragraph: var(--color-abyss-light);
 
   // Modern link
   --color-link-text: var(--color-violet);
