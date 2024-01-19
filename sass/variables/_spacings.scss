@@ -16,7 +16,7 @@
   --margin-between-paragraphs: 2.7rem;
 
   // Mid-sized screens
-  @media (max-width: $width-grid-base + 150px) {
+  @media (max-width: ($width-grid-base + 150px)) {
     --padding-container-horizontal: 6.4rem;
   }
 
