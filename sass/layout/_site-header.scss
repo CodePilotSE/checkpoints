@@ -12,7 +12,7 @@
   padding-left: var(--padding-container-horizontal);
   padding-right: var(--padding-container-horizontal);
   padding-top: var(--padding-site-header-vertical);
-  position: relative;
+  position: absolute;
   width: 100%;
   z-index: 15;
 
@@ -35,5 +35,9 @@
     align-items: center;
     display: flex;
   }
+}
+
+.site-content .site-main > :first-child{
+  padding-top: 9rem;
 }
 
