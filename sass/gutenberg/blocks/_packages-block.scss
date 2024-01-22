@@ -135,5 +135,6 @@
       color: var(--color-white);
       text-align: center;
     }
+    max-width: calc(100% - (var(--border-width-input-field) * 4));
   }
 }
