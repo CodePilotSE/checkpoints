@@ -14,6 +14,10 @@ wp.blocks.registerBlockStyle('core/media-text', {
   name: 'overlapping',
   label: 'Överlappande',
 });
+wp.blocks.registerBlockStyle('core/media-text', {
+  name: 'image-absolute',
+  label: 'Bild i sidkant',
+});
 
 // When document is ready as in when blocks are fully loaded
 window.addEventListener('load', () => {
