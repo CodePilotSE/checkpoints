@@ -70,6 +70,9 @@
       top: unset;
       left: -15%;
       width: 30rem;
+      .edit-post-visual-editor &{
+        width: 30rem!important;
+      }
       overflow-x: visible ;
       position: relative;
       height: auto;
