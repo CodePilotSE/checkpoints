@@ -44,6 +44,9 @@
 }
 
 .site-content .site-main > :first-child{
-  padding-top: 9rem;
+  padding-top: 12rem;
+  @media(min-width: 1030px){
+    padding-top: 9rem;
+  }
 }
 
