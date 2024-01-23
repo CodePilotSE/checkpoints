@@ -13,19 +13,6 @@ const backToTop = () => {
   const topButton = document.getElementById('top');
   const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])');
 
-  function trackScroll() {
-    const scrolled = window.pageYOffset;
-    const scrollAmount = document.documentElement.clientHeight;
-
-    if (scrolled > scrollAmount) {
-      topButton.classList.add('is-visible');
-    }
-
-    if (scrolled < scrollAmount) {
-      topButton.classList.remove('is-visible');
-    }
-  }
-
   if (topButton) {
     topButton.addEventListener('click', (event) => {
       // Don't add hash in the end of the url
@@ -41,7 +28,6 @@ const backToTop = () => {
     });
   }
 
-  window.addEventListener('scroll', trackScroll);
 };
 
 export default backToTop;
