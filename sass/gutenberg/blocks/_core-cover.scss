@@ -1,0 +1,12 @@
+// cover blocks
+.wp-block-cover.alignfull .wp-block-cover__inner-container .alignwide{
+  max-width: $width-wide;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right:var(--padding-container-horizontal) ;
+  padding-left: var(--padding-container-horizontal) ;
+  @media(min-width: 1240px){
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
