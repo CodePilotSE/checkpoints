@@ -16,5 +16,7 @@
   h3:has( + & ){
     margin-bottom: var(--block-gap);
   }
-  margin-bottom: var(--block-gap);
+  &:not(:last-child, .alignfull:has( + .alignfull)){
+    margin-bottom: var(--block-gap);
+  }
 }
