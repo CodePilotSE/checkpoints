@@ -109,7 +109,8 @@
   }
 
   .menu-item > a:hover,
-  .menu-item > a:focus {
+  .menu-item > a:focus, 
+  .menu-item.current-menu-item > a{
     position: relative;
     color: var(--color-hover-main-level);
       &::after{
