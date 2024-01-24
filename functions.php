@@ -286,6 +286,11 @@ function my_theme_add_new_features() {
           'color' => '#180A6A',
       ],
       [
+          'name' => esc_attr__('Ljusblå', 'default'),
+          'slug' => 'blue-light',
+          'color' => '#c4def0',
+      ],
+      [
           'name' => esc_attr__('Lavender', 'default'),
           'slug' => 'lavendar',
           'color' => '#B085B7',

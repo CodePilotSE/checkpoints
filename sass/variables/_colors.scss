@@ -12,6 +12,7 @@
   --color-scorpion: #5f5f5f;
   --color-checkpoints-blue: #0084DB; 
   --color-medium-blue:      #2A4092; 
+  --color-light-blue:       #c4def0; 
   --color-marine:           #180A6A; 
   --color-lavendar:         #B085B7;
   --color-violet:           #5D2AA4;
@@ -39,6 +40,7 @@
 $theme-colors: (
 "checkpoints-blue": var(--color-checkpoints-blue), 
 "medium-blue":      var(--color-medium-blue),
+"light-blue":       var(--color-light-blue),
 "marine":           var(--color-marine),
 "lavendar":         var(--color-lavendar),
 "violet":           var(--color-violet),
