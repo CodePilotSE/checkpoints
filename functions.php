@@ -287,7 +287,7 @@ function my_theme_add_new_features() {
       ],
       [
           'name' => esc_attr__('Ljusblå', 'default'),
-          'slug' => 'blue-light',
+          'slug' => 'light-blue',
           'color' => '#c4def0',
       ],
       [
