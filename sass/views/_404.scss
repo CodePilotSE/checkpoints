@@ -1,6 +1,20 @@
 // Error 404 title
 .block-error-404 {
+  height: 100vh;
+  .logged-in &{
+    height: calc(100vh - 32px);
+    @media screen and (max-width: 782px){
+      height: calc(100vh - 46px);
+      
+    }
+  }
+  background-color: var(--color-medium-blue);
+  --color-heading: var(--color-white);
+  --color-paragraph: var(--color-white);
   .container {
+    max-width: $width-wide;
+    padding-left: 0;
+    padding-right: 0;
     @media (min-width: $container-mobile) {
       padding-bottom: 10%;
       padding-top: 10%;
@@ -8,7 +22,7 @@
   }
 
   h1 {
-    font-size: clamp-calc($container-mobile, 1600px, 42px, 200px);
+    font-size: clamp-calc($container-mobile, 1600px, 42px, 80px);
     margin-bottom: 2rem;
   }
 }
