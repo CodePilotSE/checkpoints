@@ -1,6 +1,7 @@
 // CSS Variables for responsive paddings and margins
 :root {
   // Gaps
+  --block-gap: 4.8rem;
   --grid-gap: 4.8rem;
 
   // Paddings
@@ -13,7 +14,7 @@
   // Margins
   --margin-between-text-elements: 4rem;
   --margin-wp-block-image: 4rem;
-  --margin-between-paragraphs: 2.7rem;
+  --margin-between-paragraphs: 2rem;
 
   // Mid-sized screens
   @media (max-width: ($width-grid-base + 150px)) {
@@ -28,15 +29,6 @@
   // When navigation transforms to a responsive hamburger menu
   @media (max-width: $width-max-mobile) {
     --padding-site-header-vertical: 2rem;
-  }
-
-  // iPad
-  @media (max-width: $container-ipad-landscape) {
-    --grid-gap: 3.2rem;
-  }
-
-  @media (max-width: $container-ipad) {
-    --grid-gap: var(--padding-container-horizontal);
   }
 
   // Between iPad and a mobile phone
