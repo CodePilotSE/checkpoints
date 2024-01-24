@@ -2,7 +2,11 @@
 .wp-block-media-text.is-style-overlapping{
   padding-top: var(--padding-container-vertical);
   padding-bottom: var(--padding-container-vertical);
-  
+  &.align-top{
+    .wp-block-media-text__media{
+      align-self: start;
+    }
+  }
   .wp-block-media-text__content{
     position: relative;
   }
