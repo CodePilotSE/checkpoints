@@ -150,12 +150,16 @@
     width: 100%;
   }
 
+  
   // Wide width block
+  &[data-align="full"] .wp-block[data-align="wide"],
   &[data-align="wide"] {
     max-width: $width-wide;
     width: 100%;
-
-    @media (min-width: 870px) {
+    padding-right:var(--padding-container-horizontal) ;
+    padding-left: var(--padding-container-horizontal) ;
+ 
+    @media (min-width: 1240px) {
       padding-left: 0;
       padding-right: 0;
     }
