@@ -21,6 +21,7 @@ if ( ! empty( $block['gradient'] ) ) {
     ?><div class="package-pricing-block__inner"><?php
     while( have_rows('compare-package-pricing') ) : the_row();
 
+        $icon = get_sub_field('icon');
         $title = get_sub_field('name');
         $offer = get_sub_field('offer');
         $pricing = get_sub_field('pricing');
@@ -35,6 +36,7 @@ if ( ! empty( $block['gradient'] ) ) {
       <div class="background-effect" id="up-down"></div>
       <div class="background-effect" id="left-right"></div>
       <?= $offer ? '<span class="package-pricing-block__offer">'. $offer .'</span>' : '' ?>
+      <?= $icon ?  wp_get_attachment_image($icon, 'thumbnail', "", array("class" => "package-pricing-block__icon")) : '' ?>
       <h2 class="package-pricing-block__title"><?= $title?></h2>
       <span class="package-pricing-block__price"><?= $pricing?></span>
       <?= $sale_price ? '<span class="package-pricing-block__sale_price" >'. $sale_price .'</span>' : '' ?>

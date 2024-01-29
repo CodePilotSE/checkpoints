@@ -25,6 +25,32 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
+                    "key": "field_65b776e1df4f1",
+                    "label": "Ikon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_64d097d696527"
+                },
+                {
                     "key": "field_5efdaeb81b607",
                     "label": "Paketnamn",
                     "name": "name",
@@ -301,5 +327,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692101378
+    "modified": 1706522375
 }

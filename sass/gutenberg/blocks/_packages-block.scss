@@ -5,43 +5,44 @@
     max-width: $width-wide;
     margin: 0 auto;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto auto auto 1fr auto auto auto 1fr auto auto auto auto 1fr auto;
+    grid-template-rows: auto auto auto 1fr auto auto auto auto 1fr auto auto auto auto 1fr auto auto auto auto auto 1fr auto;
   }
   @media screen and (max-width: 589px){
     &__inner{
     max-width: 37rem;
     }
-  &__card:first-child{  grid-row: 1 / 5;}
-  &__card:nth-child(2){ grid-row: 5 / 9;}
-  &__card:nth-child(3){ grid-row: 9 / 14;}
-  &__card:last-child{   grid-row: 14 / -1;}
+  &__card:first-child{  grid-row: 1 / 6;}
+  &__card:nth-child(2){ grid-row: 6 / 11;}
+  &__card:nth-child(3){ grid-row: 11 / 16;}
+  &__card:last-child{   grid-row: 16 / -1;}
   }
   @media screen and (min-width: 590px) and (max-width: 1210px){
     &__inner{
       max-width: 69rem;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto 1fr auto auto auto 1fr auto;
+      grid-template-rows: auto auto auto 1fr auto auto auto auto 1fr auto;
     }
     &__card{
       grid-template-rows: subgrid;
-      &:first-child, &:nth-child(2){ grid-row: 1 / 5;}
-      &:nth-child(3), &:last-child{ grid-row: 5 / -1;}
+      &:first-child, &:nth-child(2){ grid-row: 1 / 6;}
+      &:nth-child(3), &:last-child{ grid-row: 6 / -1;}
     }
   }
 
   @media screen and (min-width: 1211px){
     &__inner{
       grid-template-columns: 1fr 1fr 1fr 1fr ;
-      grid-template-rows: auto auto 1fr auto;
+      grid-template-rows: auto auto auto 1fr auto;
     }
     &__card{
       grid-template-rows: subgrid;
       grid-row: 1 / -1;
     }
-    .package-pricing-block__title{         grid-row: 1 / 2}
-    .package-pricing-block__price{         grid-row: 2 / 3}
-    .package-pricing-block__feature-list{  grid-row: 3 / 4}
-    .package-pricing-block__link{          grid-row: 4 / 5}
+    .package-pricing-block__icon{         grid-row: 1 / 2}
+    .package-pricing-block__title{         grid-row: 2 / 3}
+    .package-pricing-block__price{         grid-row: 3 / 4}
+    .package-pricing-block__feature-list{  grid-row: 4 / 5}
+    .package-pricing-block__link{          grid-row: 5 / 6}
   }
   
   &__card{
@@ -83,6 +84,7 @@
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 1rem;
+    margin-top: 0;
   }
   &__price{
     font-size: 4rem;
@@ -125,6 +127,13 @@
       
     }
   }
+
+  &__icon{
+    width: 5.5rem;
+    height: auto;
+    justify-self: center;
+  }
+
   &__link{
     height: auto;
     display: block;
