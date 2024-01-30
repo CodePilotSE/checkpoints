@@ -20,6 +20,7 @@
 @import 'variables/font-size';
 @import 'variables/forms';
 @import 'variables/spacings';
+@import 'variables/font-colors';
 
 // Accessibility
 @import 'base/accessibility';
@@ -63,6 +64,8 @@
 
 // Gutenberg block backgrounds
 @import 'gutenberg/background-colors';
+
+@import 'gutenberg/special-solutions';
 
 // Gutenberg block classes
 @import 'gutenberg/classes';

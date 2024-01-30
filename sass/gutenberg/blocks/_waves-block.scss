@@ -20,11 +20,17 @@
     bottom: calc( -1.25em - 1px );
     left: -2.375em;
     width: calc(100% + (2 * 2.375em));
+    @media (max-width: 600px) {
+      bottom: calc( -5.5vw - 1px );
+    }
   }
   .wp-block-group.has-background &.rotation-top:first-child svg{ 
     top: calc( -1.25em - 1px );
     left: -2.375em;
     width: calc(100% + (2 * 2.375em));
+    @media (max-width: 600px) {
+      top: calc( -6vw - 1px );
+    }
   }
 
 

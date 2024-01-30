@@ -32,8 +32,12 @@
   // ACF blocks
   // @import 'gutenberg/blocks/your-new-acf-block';
 }
+@import 'gutenberg/blocks/core-group';
+@import 'gutenberg/blocks/core-media-text';
 @import 'gutenberg/blocks/waves-block';
 @import 'gutenberg/blocks/packages-block';
 @import 'gutenberg/blocks/feature-highlight-block';
 @import 'gutenberg/blocks/text-and-image-block';
 @import 'gutenberg/blocks/testimonials-block';
+@import 'gutenberg/blocks/clients-block';
+@import 'gutenberg/block-spacing';

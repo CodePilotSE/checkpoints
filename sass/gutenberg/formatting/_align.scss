@@ -1,6 +1,6 @@
 // Alignments
 .editor-styles-wrapper,
-.article-content {
+.site-content {
   .alignleft > * {
     float: left;
   }
@@ -28,7 +28,7 @@
       margin-top: 0;
     }
   }
-
+  .alignfull .alignwide,
   .alignwide {
     max-width: $width-wide;
     padding-left: var(--padding-container-horizontal);
@@ -52,8 +52,6 @@
     }
 
     @media (min-width: ($width-max-article + 40px)) {
-      margin-bottom: var(--padding-block);
-      margin-top: var(--padding-block);
       max-width: $width-full;
       width: $width-full;
     }
@@ -63,4 +61,9 @@
     width: 100%;
   }
   
+  .site-main > .alignwide, 
+  .site-main > .wp-block-group > .wp-block-group__inner-container > .alignwide{
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

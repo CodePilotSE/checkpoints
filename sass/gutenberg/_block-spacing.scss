@@ -1,0 +1,22 @@
+@media (max-width: 600px) {
+  :where(.wp-block-group.has-background){
+    padding: 6vw 5.5vw;
+  }
+}
+
+.wp-block-columns,
+.wp-block-media-text,
+.wp-block-video,
+.package-pricing-block,
+.testimonials-block,
+.clients-block,
+.wp-block-cover{
+  h1:has( + & ), 
+  h2:has( + & ), 
+  h3:has( + & ){
+    margin-bottom: var(--block-gap);
+  }
+  &:not(:last-child, .alignfull:has( + .alignfull)){
+    margin-bottom: var(--block-gap);
+  }
+}

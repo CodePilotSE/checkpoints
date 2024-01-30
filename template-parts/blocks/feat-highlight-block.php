@@ -11,8 +11,8 @@ if (!empty($block['gradient'])) {
   $classes[] = 'has-' . $block['gradient'] . '-background';
 }
 
-$block['style']['color']['gradient'] ? $background = $block['style']['color']['gradient'] : '';
-$block['style']['color']['background'] ? $background = $block['style']['color']['background'] : '';
+!empty($block['style']['color']['gradient']) ? $background = $block['style']['color']['gradient']: '';
+!empty($block['style']['color']['background']) ? $background = $block['style']['color']['background'] : '';
 ?>
 <?php
 $title = get_field('feat-highlight-text-group')['feat-highlight-title'];
@@ -21,7 +21,7 @@ $image = get_field('feat-highlight-image');
 $size = 'feature-heighlight'; // (thumbnail, medium, large, full or custom size)
 
 ?>
-<section class="<?= esc_attr(join(' ', $classes)) ?>" <?= $background ? 'style="background:' . $background . ';"' : '' ?>>
+<section class="<?= esc_attr(join(' ', $classes)) ?>" <?= !empty($background) ? 'style="background:' . $background . ';"' : '' ?>>
 
   <div class="feature-highlight-block__inner">
     

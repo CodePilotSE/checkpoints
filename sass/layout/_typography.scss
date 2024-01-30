@@ -37,6 +37,15 @@ h6 {
   margin-top: var(--margin-between-paragraphs);
 }
 
+h5{
+  &:has( + h3),&:has( + h2),&:has( + h1) {
+    margin-bottom: 0;
+  }
+  & + h3, & + h2, & + h1{
+    margin-top: 1rem;
+  }
+}
+
 h2,
 h3,
 h4,
@@ -48,6 +57,7 @@ h6 {
 // Define heading scales
 // Current: Perfect fourth: https://type-scale.com/
 h1 {
+  line-height: 1.2;
   font-size: var(--font-size-h1);
 }
 
@@ -94,8 +104,8 @@ i {
 
 // Default paragraphs
 p {
-  margin-bottom: 2.9rem;
-  margin-top: 2.9rem;
+  margin-bottom: var(--margin-between-paragraphs);
+  margin-top: var(--margin-between-paragraphs);
 }
 
 p:last-child {

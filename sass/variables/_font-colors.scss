@@ -1,0 +1,16 @@
+
+@each $color-name, $color-hex in $theme-colors {
+  .has-#{$color-name}-color{
+    --color-paragraph: #{$color-hex}!important;
+    --color-heading: #{$color-hex}!important;
+  }
+}
+
+.has-marine-background-color,
+.has-abyss-background-color,
+.has-lavendar-background-color,
+.has-violet-blue-background-color,
+.has-amethyst-background-color {
+  --color-paragraph: var(--color-white);
+  --color-heading: var(--color-white);
+}

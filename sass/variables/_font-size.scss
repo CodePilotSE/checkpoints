@@ -3,12 +3,12 @@
 :root {
   // Heading font sizes
   --font-size-hero: 90px;
-  --font-size-h1: 60px;
-  --font-size-h2: 55px;
-  --font-size-h3: 30px;
-  --font-size-h4: 24px;
-  --font-size-h5: 16px;
-  --font-size-h6: 14px;
+  --font-size-h1: clamp(32px, 5.4vw, 68px );
+  --font-size-h2: clamp(28px, 4.5vw, 48px );
+  --font-size-h3: clamp(21px, 3vw, 30px );
+  --font-size-h4: clamp(19px, 2.5vw, 23px );
+  --font-size-h5: clamp(18px, 2vw, 21px );
+  --font-size-h6: clamp(14px, 1vw, 18px );
 
   // Paragraph font sizes
   --font-size-12: 12px;
@@ -22,12 +22,12 @@
   --font-size-22: 22px;
 
   // Element font sizes
-  --font-size-paragraph: var(--font-size-18);
+  --font-size-paragraph: clamp(16px, 2vw, var(--font-size-18));
   --font-size-nav-toggle-label: 15px;
   --font-size-captions: 15px;
 
   // Line-heights
-  --line-height-heading: 1.5;
+  --line-height-heading: 1.2;
   --line-height-core-heading: 1.23;
   --line-height-paragraph: 1.7;
 
@@ -40,16 +40,7 @@
   --font-weight-heading: var(--font-weight-bold);
 
   // Heading font sizes in mobile
-  @media (max-width: $container-mobile) {
-    --font-size-hero: 38px;
-    --font-size-h1: 32px;
-    --font-size-h2: 24px;
-    --font-size-h3: 21px;
-    --font-size-h4: 18px;
-    --font-size-h5: 14px;
-    --font-size-h6: 12px;
-    --font-size-paragraph: 16px;
-  }
+
 
   // Element font sizes in tiny phones like iPhone 5S
   @media (max-width: 420px) {

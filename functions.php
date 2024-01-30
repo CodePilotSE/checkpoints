@@ -98,6 +98,7 @@ add_action( 'after_setup_theme', function() {
      */
     'post_types' => [
       'cp_testimonials',
+      'cp_block_areas',
     ],
 
     /**
@@ -155,6 +156,18 @@ add_action( 'after_setup_theme', function() {
         ]
       ],
       [
+        'name'           => 'clients-block',
+        'title'          => 'Kunder',
+        'supports'		   => [
+          'color'           => [
+            'background' => true,
+            'gradients' => true,
+          ],
+          'anchor'          => true,
+          'jsx' 			      => true,
+        ]
+      ],
+      [
         'name'           => 'feat-highlight-block',
         'title'          => 'Feature hightlight-block',
         'supports'		   => [
@@ -198,52 +211,20 @@ add_action( 'after_setup_theme', function() {
       'core/list',
       'core/image',
       'core/block',
+      'core/cover',
+      'core/columns',
+      'core/column',
       'core/paragraph',
+      'core/html',
       'core/heading',
+      'core/media-text',
       'core/video',
       'core/spacer',
       'core/file',
       'core/subhead',
       'core/quote',
       'core/group',
-      
-    ],
-    'post' => [
-      'core/archives',
-      'core/audio',
-      'core/buttons',
-      'core/categories',
-      'core/code',
-      'core/column',
-      'core/columns',
-      'core/coverImage',
-      'core/embed',
-      'core/file',
-      'core/freeform',
-      'core/gallery',
-      'core/heading',
-      'core/html',
-      'core/image',
-      'core/latestComments',
-      'core/latestPosts',
-      'core/list',
-      'core/list-item',
-      'core/more',
-      'core/nextpage',
-      'core/paragraph',
-      'core/preformatted',
-      'core/pullquote',
-      'core/quote',
-      'core/block',
-      'core/separator',
-      'core/shortcode',
-      'core/spacer',
-      'core/subhead',
-      'core/table',
-      'core/textColumns',
-      'core/verse',
-      'core/video',
-    ],
+    ]
     ],
 
     // If you want to use classic editor somewhere, define it here
@@ -269,17 +250,17 @@ function theme_custom_gradients()
 {
     add_theme_support('editor-gradient-presets', array(
         array(
-            'name' => __('pruple-to-dark-blue', 'your-textdomain'),
+            'name' => __('pruple-to-dark-blue', 'checkpoints'),
             'gradient' => 'linear-gradient(0deg, var(--color-amethyst) 0%, #232F69 21%, #1A1A39 78%,  #3C2A92 100%)',
             'slug' => 'pruple-to-dark-blue'
         ),
         array(
-            'name' => __('light-blue-to-light-purple', 'your-textdomain'),
+            'name' => __('light-blue-to-light-purple', 'checkpoints'),
             'gradient' => 'linear-gradient(125deg, rgba(0,132,219,1) 0%, rgba(42,64,146,1) 32%, rgba(71,51,156,1) 60%, rgba(93,42,164,1) 83%)',
             'slug' => 'light-blue-to-light-purple'
         ),
         array(
-            'name' => __('light-blue-to-dark-blue', 'your-textdomain'),
+            'name' => __('light-blue-to-dark-blue', 'checkpoints'),
             'gradient' => 'linear-gradient(0deg, #0380D8 0%, #251D63 100%)',
             'slug' => 'light-blue-to-dark-blue'
         ),
@@ -304,6 +285,11 @@ function my_theme_add_new_features() {
           'name' => esc_attr__('Mörkblå', 'default'),
           'slug' => 'marine',
           'color' => '#180A6A',
+      ],
+      [
+          'name' => esc_attr__('Ljusblå', 'default'),
+          'slug' => 'light-blue',
+          'color' => '#c4def0',
       ],
       [
           'name' => esc_attr__('Lavender', 'default'),
@@ -339,6 +325,27 @@ add_action( 'after_setup_theme',  __NAMESPACE__ . '\my_theme_add_new_features' )
 // add image sizes
 add_image_size( 'feature-heighlight', 400, 350, true );
 
+function get_footer_edit_id() {
+  $slug = 'footer';
+  $post_type = 'cp_block_areas';
+  $post = get_page_by_path($slug, OBJECT, $post_type);
+  $post_id = false;
+
+  if($post):
+    $post_id = $post->ID;
+  endif;
+  return $post_id;
+}
+
+  
+function add_custom_menu_link(){
+  $post_id = get_footer_edit_id();
+  if(!empty($post_id)):
+    $url = get_edit_post_link($post_id); 
+    add_menu_page('edit_footer', __('Sidfot', 'checkpoints'), 'edit_others_posts', $url, '', 'dashicons-admin-generic', 999);
+  endif;
+}
+add_action('admin_menu', __NAMESPACE__ . '\add_custom_menu_link');
 /**
  * Required files
  */

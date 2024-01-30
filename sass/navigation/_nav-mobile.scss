@@ -47,12 +47,12 @@
 }
 
 // Mobile styles
-@media screen and (max-width: $width-max-mobile - 1px) {
+@media screen and (max-width: ($width-max-mobile - 1px)) {
   // Let's ensure site-header loads properly and doesn't leave empty spaces
   .site-header {
     background-color: var(--color-background-nav-mobile-header);
   }
-
+  
   // General navigation resets for mobile
   .site-header ul,
   .site-header li,
@@ -224,5 +224,17 @@
   .js-nav-active .site-main,
   .js-nav-active .site-footer {
     transform: translate3d(calc(var(--width-navigation) * -1), 0, 0);
+  }
+}
+
+// icons in menu 
+.menu-item span{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 0.2em;
+  svg{
+    width: 1em;
+    height: 1em;
   }
 }

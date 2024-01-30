@@ -1,0 +1,110 @@
+
+.wp-block-media-text.is-style-overlapping{
+  padding-top: calc( var(--block-gap) / 2 );
+  padding-bottom: calc( var(--block-gap) / 2 );
+  &.align-top{
+    .wp-block-media-text__media{
+      align-self: start;
+    }
+  }
+  .wp-block-media-text__content{
+    position: relative;
+  }
+  @media (max-width: 600px){
+    .wp-block-media-text__content{
+      margin-top: -5rem;
+      padding: 2rem;
+    }
+  }
+  @media (min-width: 601px){
+    .wp-block-media-text__content{
+      padding: 0;
+    }
+    &.has-media-on-the-right{
+      .wp-block-media-text__content{
+        margin-right: -11vw;
+        max-width: 700px;
+      }
+      
+    }
+    &:not(.has-media-on-the-right){
+      .wp-block-media-text__content{
+        margin-left: -11vw;
+      }
+    }
+  }
+}
+
+.wp-block-media-text.is-style-image-absolute{
+  $breakpoint-mid: 1000px;
+  $breakpoint-large: 1500px;
+  $max-text-width: 700px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding-top: var(--padding-container-vertical);
+  padding-bottom: var(--padding-container-vertical);
+  .wp-block-media-text__content{
+    width: 100%;
+    padding:0;
+    position: relative;
+    z-index: 3;
+    max-width: $max-text-width;
+    margin-top: -17vw;
+    flex-grow: 1;
+  }
+
+  .wp-block-media-text__media{
+    display: block;
+    z-index: 2;
+    left: calc(var(--padding-container-horizontal) * -1);
+    width: calc(100% + var(--padding-container-horizontal));
+    
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (min-width: $breakpoint-mid) {
+    flex-direction: row;
+    .wp-block-media-text__media{
+      top: unset;
+      left: -15%;
+      width: 30rem;
+      .edit-post-visual-editor &{
+        width: 30rem!important;
+      }
+      overflow-x: visible ;
+      position: relative;
+      height: auto;
+      img{
+        min-width: 130rem;
+        position: unset;
+        display: block;
+      }
+    }
+    .wp-block-media-text__content{
+      margin-top: 0;
+    }
+    
+  }
+}
+[data-align="wide"] > .wp-block-media-text:not(.has-background),
+.wp-block-media-text.alignwide:not(.has-background) {
+  &.has-media-on-the-left .wp-block-media-text__content{
+    padding-right: 0;
+  }
+  &.has-media-on-the-right .wp-block-media-text__content{
+    padding-left: 0;
+  }
+  &.is-stacked-on-mobile{
+    @media (max-width: 600px) {
+      .wp-block-media-text__content{
+        padding: 0;   
+      }
+    }
+  }
+}

@@ -10,17 +10,18 @@ if ( ! empty( $block['gradient'] ) ) {
   $classes[] = 'has-'.$block['gradient'].'-background';
 }
 
-$block['style']['color']['gradient'] ? $background = $block['style']['color']['gradient']: '';
-$block['style']['color']['background'] ? $background = $block['style']['color']['background']: '';
+!empty($block['style']['color']['gradient'])? $background = $block['style']['color']['gradient']: '';
+!empty($block['style']['color']['background']) ? $background = $block['style']['color']['background']: '';
 ?>
 
 
-<section class="<?= esc_attr( join( ' ', $classes ) ) ?>" <?= $background ? 'style="background:'. $background .';"':'' ?> >
+<section class="<?= esc_attr( join( ' ', $classes ) ) ?>" <?= !empty($background) ? 'style="background:'. $background .';"':'' ?> >
   <?php 
   if( have_rows('compare-package-pricing') ):
-    ?><div class="<?= $enabled ? '' : 'disabled' ?> package-pricing-block__inner"><?php
+    ?><div class="package-pricing-block__inner"><?php
     while( have_rows('compare-package-pricing') ) : the_row();
 
+        $icon = get_sub_field('icon');
         $title = get_sub_field('name');
         $offer = get_sub_field('offer');
         $pricing = get_sub_field('pricing');
@@ -35,6 +36,7 @@ $block['style']['color']['background'] ? $background = $block['style']['color'][
       <div class="background-effect" id="up-down"></div>
       <div class="background-effect" id="left-right"></div>
       <?= $offer ? '<span class="package-pricing-block__offer">'. $offer .'</span>' : '' ?>
+      <?= $icon ?  wp_get_attachment_image($icon, 'thumbnail', "", array("class" => "package-pricing-block__icon")) : '' ?>
       <h2 class="package-pricing-block__title"><?= $title?></h2>
       <span class="package-pricing-block__price"><?= $pricing?></span>
       <?= $sale_price ? '<span class="package-pricing-block__sale_price" >'. $sale_price .'</span>' : '' ?>
@@ -61,14 +63,9 @@ $block['style']['color']['background'] ? $background = $block['style']['color'][
         
         // end of package feature rows
 
-        if($button):
-          ?><a href="<?=  $button['url']  ?>" aria-disabled="<?= $enabled ? 'false' :'true' ?>" target="_blank" class="package-pricing-block__link no-external-link-indicator">
-          <button class="button button--no-bg">
-            <?= $button['title']; ?>
-            </button>
-          </a>
+        if($button['url'] && $button['title']):
+          ?><a href="<?= $button['url'] ?>" target="_blank" class="button button--no-bg package-pricing-block__link no-external-link-indicator"><?= $button['title'] ?></a>
           <?php
-            
         endif;
         ?>
       
