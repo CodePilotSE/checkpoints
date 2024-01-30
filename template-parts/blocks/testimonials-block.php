@@ -38,11 +38,8 @@ if ( ! empty( $block['gradient'] ) ) {
           <h6 class="testimonials-single__quote"><?= get_the_title() ?></h6>  
 
           <div class="testimonials-single__citee">
-            <?= get_the_post_thumbnail('','thumbnail', array( 'class' => 'testimonials-single__image')) ?>
-            <div class="testimonials-single__name-and-company">
-              <?= !empty($name)    ? '<span class="testimonials-single__name">'. $name    . '</span>' : '' ?>
-              <?= !empty($company) ? '<span class="testimonials-single__company">'. $company . '</span>' : '' ?>
-            </div>
+            <?= !empty($name)    ? '<span class="testimonials-single__name">'. $name    . '</span>' : '' ?>
+            <?= !empty($company) ? '<span class="testimonials-single__company">'. $company . '</span>' : '' ?>
           </div>
         </div>
       <?php endwhile?>

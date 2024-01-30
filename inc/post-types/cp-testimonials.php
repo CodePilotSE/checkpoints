@@ -43,7 +43,7 @@ class cp_testimonials extends Post_Type {
       'exclude_from_search' => true,
       'show_in_rest'        => false,
       'pll_translatable'    => true,
-      'supports'            => [ 'title', 'thumbnail', 'revisions' ],
+      'supports'            => [ 'title', 'revisions' ],
       'taxonomies'          => [],
     ];
 
