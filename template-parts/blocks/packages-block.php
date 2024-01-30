@@ -48,6 +48,7 @@ if ( ! empty( $block['gradient'] ) ) {
           while( have_rows('package-features') ) : the_row();
           
             $icon = get_sub_field('icon');
+            $icon = strtolower($icon);
             $feat = get_sub_field('single-feature');
             $icon_url = get_template_directory().'/svg/checkpoints-icons/'. $icon .'.php';
             ?>
