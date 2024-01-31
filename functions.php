@@ -168,6 +168,18 @@ add_action( 'after_setup_theme', function() {
         ]
       ],
       [
+        'name'           => 'packages-comparison',
+        'title'          => 'Jämför paket-block',
+        'supports'		   => [
+          'color'           => [
+            'background' => true,
+            'gradients' => true,
+          ],
+          'anchor'          => true,
+          'jsx' 			      => true,
+        ]
+      ],
+      [
         'name'           => 'feat-highlight-block',
         'title'          => 'Feature hightlight-block',
         'supports'		   => [
