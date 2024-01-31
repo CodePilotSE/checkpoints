@@ -220,6 +220,7 @@ add_action( 'after_setup_theme', function() {
     'default' => [
       'core/gallery',
       'core/buttons',
+      'core/button',
       'core/list',
       'core/image',
       'core/block',
