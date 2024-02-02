@@ -34,9 +34,11 @@ if ( ! empty( $block['gradient'] ) ) {
 
     ?>
     <div class="package-comparison__single-package <?= $package_nice_name ?>">
-      <?= $package_icon ? wp_get_attachment_image($package_icon, 'thumbnail', "", array("class" => "package-comparison__icon")) : '' ?>
-      <h3 class="package-comparison__title"><?= $package_name ?> </h3>
-      <span class="package-comparison__price"><?= $package_price ?></span>
+      <div class="package-comparison__package-head">
+        <?= $package_icon ? wp_get_attachment_image($package_icon, 'thumbnail', "", array("class" => "package-comparison__icon")) : '' ?>
+        <h3 class="package-comparison__title"><?= $package_name ?> </h3>
+        <span class="package-comparison__price"><?= $package_price ?></span>
+      </div>
       <ul class="package-comparison__feature-list">
         <?php 
         foreach($features as $feature):
