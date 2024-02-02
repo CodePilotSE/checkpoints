@@ -11,7 +11,9 @@
 
   &:hover,
   &:focus {
-    color: var(--color-link-text-hover);
-    text-decoration-color: var(--color-link-text-hover);
-  }
+    &:not(.wp-block-button .wp-block-button__link, .nav-link){
+      color: var(--color-link-text-hover);
+      text-decoration-color: var(--color-link-text-hover);
+    }
+    }
 }
