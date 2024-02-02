@@ -38,7 +38,7 @@ class cp_block_areas extends Post_Type {
       'labels'              => $generated_labels,
       'menu_icon'           => null,
       'public'              => true,
-      'show_ui'             => false,
+      'show_ui'             => true,
       'has_archive'         => false,
       'exclude_from_search' => true,
       'show_in_rest'        => true,
