@@ -121,7 +121,7 @@ add_action( 'after_setup_theme', function() {
         ],
         [
         'name'           => 'packages-block',
-        'title'          => 'Jämför paket-block',
+        'title'          => 'Pris-block Startsida',
         'supports'		   => [
           'color'           => [
             'background' => true,

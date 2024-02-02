@@ -1,0 +1,166 @@
+.package-comparison{
+  
+  &__block{
+    --package-block-padding: 10vw;
+    --package-gap: 0 1rem;
+    --feature-font-size:clamp( var(--font-size-14) , 4vw ,var(--font-size-18));
+    --package-padding: clamp(2rem, 5vw, 3rem);
+    --package-width: #{clamp-calc(  320px , 500px , 240px , 380px)};
+    
+    @media (min-width: 500px) and (max-width: 799px){
+      // small size with 1 card in viewport
+      --package-width: #{clamp-calc(  500px , 799px , 380px , 450px)};
+      --package-block-padding: #{clamp-calc(500px, 800px, 50px , 200px)};
+      
+    }
+    @media (min-width: 800px) and (max-width: 1099px){
+      // medium size with 2 cards in viewport
+      --package-width: #{clamp-calc(  800px , 1100px , 360px ,  470px)};
+      --package-block-padding: 1rem;
+      &__single-package:nth-child(2){
+        scroll-snap-stop:unset;
+      }
+    }
+    @media (min-width: 1100px) {
+      --package-width: 1fr;
+      --package-block-padding: 0;
+      &__inner{
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 1099px) {
+      .site-main &.alignwide{
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $width-wide;
+    width: 100%;
+  }
+  
+  &__inner{
+    display: grid;
+    gap: var(--package-gap);
+    grid-template-columns: repeat(3, var(--package-width));
+    grid-template-rows: auto auto auto auto auto;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: scroll;
+    padding-left: var(--package-block-padding);
+    padding-right: var(--package-block-padding);
+    scroll-snap-align: center;
+    scroll-snap-type: x mandatory;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__single-package{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    width: var(--package-width);
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    grid-row: 1 / -1;
+    border-radius: 1rem;
+    padding: 6rem var(--package-padding) ;
+    justify-content: center;
+    &.core{
+      background-color: var(--color-checkpoints-blue);
+      background: linear-gradient(180deg, #0585DF 0%, #2A50A0 100%); 
+    }
+    &.pro{
+      background-color: var(--color-medium-blue);
+      background: linear-gradient(180deg, #2748C3 0%, #2D2D7C 100%);
+    }
+    &.enterprise{
+      background-color: var(--color-violet);
+      background: linear-gradient(180deg, #611ABD 0%, #2F499E 100%);
+    }
+
+    .button{
+      color: var(--color-white);
+      width: fit-content;
+      max-width: 100%;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__icon{
+    margin: auto;
+  }
+  &__title{
+    color: var(--color-white);
+    text-align: center;
+    font-size: var(--font-size-h2);
+    margin-bottom: 0;
+  }
+  
+  &__price{
+    color: var(--color-white);
+    text-align: center;
+    font-size: var(--font-size-h3);
+    font-weight: 700;
+  }
+  &__feature-list{
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+  }
+  &__feature-list-item{
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--feature-font-size) auto;
+    color: var(--color-white);
+    gap: 1rem;
+    align-items: center;
+    span{
+      font-size: var(--feature-font-size);
+      text-align: left;
+      white-space: normal;
+      word-break: break-word;
+      line-height: 1.5;
+    }
+
+    svg{
+      flex-grow: 1;
+      width: var(--feature-font-size);
+      height: var(--feature-font-size);
+    }
+    &--disabled{
+      opacity: 30%;
+    }
+    
+  }
+// this is the feature description styling - its not yet enabled in packages-comparison.php
+
+  // &__feature-description{
+  //   position: absolute;
+  //   background-color: var(--color-white);
+  //   padding: 1rem;
+  //   top: 100%;
+  //   display: none;
+  //   z-index: 999;
+  //   p{margin-top: 0;}
+  //   &__arrow{
+  //     position: absolute;
+  //     bottom: 100%;
+  //     height: 2rem;
+  //     width: 2rem;
+  //     background-color: red;
+
+  //   }
+  // }
+  // &__feature-list-item:hover,
+  // &__feature-description:hover{
+  //   .package-comparison__feature-description{
+  //     display: block;
+  //   }
+  // }
+}

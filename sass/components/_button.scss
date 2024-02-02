@@ -40,11 +40,16 @@
     padding-top:    calc( var(--button-padding-vertical) - 6px);
     padding-bottom: calc( var(--button-padding-vertical) - 6px);
   }
+
   &.focus,
   &:hover,
   &:focus {
-    background-color: var(--color-button-background-hover);
-    border-color: var(--color-button-background-hover);
-    color: var(--color-button-hover);
+    &.is-style-fill{
+    filter: brightness(80%);
+    }
+    &:not(.is-style-fill){
+      background-color: var(--color-checkpoints-blue);
+      color: var(--color-white);
+    }
   }
 }
