@@ -20,6 +20,7 @@
       background-image: linear-gradient(80deg, #1900ff5b, #0008ff6a);
       filter: blur(80px);
       animation: core-one 30s infinite;
+      will-change: transform;
     }
     #left-right{
       height: 300px;
@@ -28,6 +29,7 @@
       background-image: linear-gradient(80deg, #1372d1, rgba(76, 196, 240, 0.4));
       filter: blur(100px);
       animation: core-two 27s .5s infinite;
+      will-change: transform;
     }
   }
   &:nth-child(3){
@@ -38,6 +40,7 @@
       background-image: linear-gradient(80deg, #00ffbf5d, #2987c5);
       filter: blur(80px);
       animation: pro-one 11s infinite;
+      will-change: transform;
     }
     #left-right{
       height: 300px;
@@ -46,6 +49,7 @@
       background-image: linear-gradient(80deg, #1372d1, rgba(76, 196, 240, 0.4));
       filter: blur(100px);
       animation: pro-two 19s .5s infinite;
+      will-change: transform;
     }
   }
   &:nth-child(4){
@@ -56,6 +60,7 @@
       background-image: linear-gradient(80deg, rgba(245, 207, 82, 0.2), rgba(199, 10, 114,.3));
       filter: blur(80px);
       animation: enterprise-one 24s infinite;
+      will-change: transform;
     }
     #up-down{
       height: 300px;
@@ -64,6 +69,7 @@
       background-image: linear-gradient(80deg, #40107f, rgb(172, 1, 109));
       filter: blur(100px);
       animation: enterprise-two 22s .5s infinite;
+      will-change: transform;
     }
 
 
