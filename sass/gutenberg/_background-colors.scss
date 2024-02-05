@@ -26,6 +26,10 @@ $background-gradients: (
   }
 }
   
-body, .is-root-container{
+.post-type-cp_block_areas{
+  background-color: var(--color-abyss);
+}
+
+body, body:not(.post-type-cp_block_areas) .is-root-container{
   background-color: #ECF7FF;
 }
