@@ -147,3 +147,13 @@ html :where(.wp-block) {
 html{
   scroll-behavior: smooth;
 }
+
+#page{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .site-content{
+    flex-grow: 1;
+  }
+
+}
