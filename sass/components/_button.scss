@@ -29,7 +29,11 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-
+  @each $color-name, $color-hex in $theme-colors {
+    &.has-#{$color-name}-color{
+      color: #{$color-hex};
+    }
+  }
   &.button--no-bg{
     background-color: transparent;
     background: transparent;
@@ -40,15 +44,19 @@
     padding-top:    calc( var(--button-padding-vertical) - 6px);
     padding-bottom: calc( var(--button-padding-vertical) - 6px);
   }
-
+  
+  .wp-block-button &.focus,
+  .wp-block-button &:hover,
+  .wp-block-button &:focus,
   &.focus,
   &:hover,
   &:focus {
-    &.is-style-fill{
+    &.has-background{
     filter: brightness(80%);
     }
-    &:not(.is-style-fill){
+    &:not(.has-background){
       background-color: var(--color-checkpoints-blue);
+      border:2px solid var(--color-checkpoints-blue);
       color: var(--color-white);
     }
   }

@@ -2,7 +2,7 @@
 $size = 'thumbnail';
 
 $classes = [];
-$classes[] = 'clients-block';
+$classes[] = 'clients-block alignwide';
 if ( ! empty( $block['backgroundColor'] ) ) {
   $classes[] = 'has-background';
   $classes[] = 'has-' . $block['backgroundColor'] . '-background-color';
@@ -20,13 +20,12 @@ if ( ! empty( $block['gradient'] ) ) {
     <div class="clients-block__inner">
       <?php
       while( have_rows('clients-repeater') ) : the_row();
-        $link = get_sub_field('client-link');
         $logo = get_sub_field('client-logo');
-        if(!empty($link) && !empty($logo)):
+        if(!empty($logo)):
           ?>
-          <a class="clients-block__link" target="_blank" href="<?= $link ?>">
+          <div class="clients-block__link">
             <?= wp_get_attachment_image($logo, 'medium') ?>
-          </a>
+          </div>
           <?php
         endif;
       endwhile;
