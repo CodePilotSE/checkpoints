@@ -108,3 +108,9 @@
     }
   }
 }
+
+.site-content .alignwide.wp-block-media-text{
+  padding-left: 0;
+  padding-right: 0;
+  width: calc(100% - 2 * var(--padding-container-horizontal));
+}
