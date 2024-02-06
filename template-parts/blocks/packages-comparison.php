@@ -16,6 +16,11 @@ if ( ! empty( $block['gradient'] ) ) {
 
 
 <section class="<?= esc_attr( join( ' ', $classes ) ) ?>" <?= !empty($background) ? 'style="background:'. $background .';"':'' ?> >
+  <div class="package-comparison__card-indicators-wrapper">
+    <div class="package-comparison__card-indicator package-comparison__core-card-indicator"></div>
+    <div class="package-comparison__card-indicator package-comparison__pro-card-indicator"></div>
+    <div class="package-comparison__card-indicator package-comparison__enterprise-card-indicator"></div>
+  </div>
   <div class="package-comparison__inner" dir="ltr">
 
   <?php 
