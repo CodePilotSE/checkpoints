@@ -18,6 +18,10 @@ wp.blocks.registerBlockStyle('core/media-text', {
   name: 'image-absolute',
   label: 'Bild i sidkant',
 });
+wp.blocks.registerBlockStyle('core/group', {
+  name: 'full-page',
+  label: 'Fyll sida',
+});
 
 // When document is ready as in when blocks are fully loaded
 window.addEventListener('load', () => {

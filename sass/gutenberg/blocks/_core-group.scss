@@ -9,3 +9,16 @@
       padding-right: 0px
     }
 }
+.site-content:has(.wp-block-group.is-style-full-page){
+  display: flex;
+  flex-direction: column;
+  .site-main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .wp-block-group.is-style-full-page{
+    flex-grow: 1;
+    height: 100%;
+  }
+}
