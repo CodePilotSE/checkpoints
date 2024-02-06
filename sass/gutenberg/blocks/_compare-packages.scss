@@ -80,6 +80,14 @@
     &.enterprise{
       background-color: var(--color-violet);
       background: linear-gradient(180deg, #611ABD 0%, #2F499E 100%);
+      
+      //remove this when enterprice is released
+      // from here
+      .button{
+        pointer-events: none;
+        opacity: 30%;
+      }
+      // to here
     }
 
     .button{
