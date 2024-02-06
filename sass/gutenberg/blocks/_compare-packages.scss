@@ -143,6 +143,8 @@
   &__icon{
     margin: auto;
     grid-area: icon;
+    width: clamp-calc(320px, 500px, 40px , 60px);
+    height: clamp-calc(320px, 500px, 40px , 60px);
   }
   &__title{
     color: var(--color-white);
