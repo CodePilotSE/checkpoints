@@ -11,6 +11,7 @@ import backToTop from './modules/top';
 import initA11ySkipLink from './modules/a11y-skip-link';
 import initA11yFocusSearchField from './modules/a11y-focus-search-field';
 import { navDesktop, navClick, navMobile } from './modules/navigation';
+import comparePackagesScroll from './modules/compare-packages-scroll';
 
 // Define Javascript is active by changing the body class
 document.body.classList.remove('no-js');
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initExternalLinkLabels();
   initA11ySkipLink();
   initA11yFocusSearchField();
+  comparePackagesScroll();
 
   // Init navigation
   // If you want to enable click based navigation, comment navDesktop() and uncomment navClick()
