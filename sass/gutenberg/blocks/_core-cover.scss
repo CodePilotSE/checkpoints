@@ -1,0 +1,7 @@
+// Core/cover block
+
+.wp-block-cover .wp-block-cover__image-background {
+  left: -1px;
+  min-width: calc(100% + 2px);
+  width: unset;
+}
