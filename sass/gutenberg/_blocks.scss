@@ -1,6 +1,7 @@
 // List of all blocks: https://wordpress.org/support/article/blocks/
 // Core blocks only meant for article content
 @import 'gutenberg/blocks/core-buttons';
+
 .editor-styles-wrapper,
 .article-content {
   @import 'gutenberg/blocks/core-blockquote';
@@ -17,7 +18,7 @@
   // Custom Gutenberg block styles
   @import 'gutenberg/blocks/boxed';
   @import 'gutenberg/blocks/button-file';
-  
+
 
   // Add here those ACF Gutenberg blocks you want to use inside article-content
   // @import 'gutenberg/blocks/your-new-acf-block';
@@ -32,7 +33,9 @@
   // ACF blocks
   // @import 'gutenberg/blocks/your-new-acf-block';
 }
+
 @import 'gutenberg/blocks/core-group';
+@import 'gutenberg/blocks/core-cover';
 @import 'gutenberg/blocks/compare-packages';
 @import 'gutenberg/blocks/core-media-text';
 @import 'gutenberg/blocks/waves-block';
