@@ -1,4 +1,8 @@
 // Core/cover block
+.wp-block-cover__inner-container > .alignwide {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .wp-block-cover .wp-block-cover__image-background {
   left: -3px;
